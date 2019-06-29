@@ -1,0 +1,63 @@
+{
+  "name": "material-design-lite",
+  "version": "1.0.0",
+  "homepage": "https://sunnypixels.io/",
+  "description": "This theme, like WordPress, is licensed under the GPL. Use it to make something cool, have fun, and share what you've learned with others.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "watch": "./node_modules/grunt/bin/grunt watch",
+    "build-js": "./node_modules/grunt/bin/grunt build-js",
+    "build-css": "./node_modules/grunt/bin/grunt build-css",
+    "makepot": "./node_modules/grunt/bin/grunt makepot",
+    "textdomain": "./node_modules/grunt/bin/grunt textdomain",
+    "build-archive": "./node_modules/grunt/bin/grunt build-archive",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reatlat/material-design-lite.git"
+  },
+  "keywords": [
+    "_S",
+    "Underscores",
+    "custom-background",
+    "custom-logo",
+    "custom-menu",
+    "featured-images",
+    "threaded-comments",
+    "translation-ready",
+    "customizer",
+    "modules",
+    "reatlat"
+  ],
+  "author": {
+    "name": "Alex Zappa a.k.a. re[at]lat",
+    "email": "reatlat@gmail.com",
+    "url": "https://reatlat.net"
+  },
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/reatlat/material-design-lite/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "grunt": "^1.0.4",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-babel": "^8.0.0",
+    "grunt-checktextdomain": "^1.0.1",
+    "grunt-cli": "^1.3.2",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-compress": "^1.5.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-csso": "^2.2.4",
+    "grunt-wp-i18n": "^1.0.3",
+    "load-grunt-tasks": "^5.0.0"
+  }
+}

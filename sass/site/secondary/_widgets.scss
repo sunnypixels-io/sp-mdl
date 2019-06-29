@@ -1,0 +1,15 @@
+.widget {
+	margin: 0 0 1.5em;
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+
+	.mdl-card__title {
+		margin-bottom: 20px;
+		.mdl-card__title-text {
+			color: $mdl-color--white;
+		}
+	}
+}

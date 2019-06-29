@@ -1,0 +1,20 @@
+.mdl-page-links {
+  padding: 16px;
+
+  .entry-page-links__title {
+    color: rgba($mdl-color--black, .4) !important;
+    min-width: initial;
+  }
+
+  .post-page-numbers.current {
+    .mdl-button--icon {
+      background-color: rgba($mdl-color--gray-500,.2);
+    }
+  }
+
+  .mdl-button--icon {
+    color: $mdl-color--gray-600;
+    font-weight: 400;
+    font-size: 18px;
+  }
+}

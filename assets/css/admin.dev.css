@@ -1,0 +1,15 @@
+.mdl-theme-info .notice,
+.mdl-theme-info .fs-notice,
+.mdl-theme-info #setting-error-tgmpa {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0px !important;
+  width: 0px !important;
+}
+
+.js-mdl--footer-menu--add-fields {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=admin.dev.css.map */

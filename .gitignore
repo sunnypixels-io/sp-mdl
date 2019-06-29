@@ -1,0 +1,21 @@
+# Apple macOS
+.DS_Store
+.DS_Store?
+*/.DS_Store
+
+# Node files
+node_modules
+.sass-cache
+
+# IntelliJ IDEA
+.idea
+
+# Work files
+build/*
+assets/css/*.dev.css
+assets/css/*.css.map
+assets/js/*.dev.js
+assets/js/*.js.map
+
+# Theme archives
+material-design-lite.v*.*.*.zip

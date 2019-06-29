@@ -1,0 +1,39 @@
+#customize-controls {
+
+  // Set css for mdl colors
+  .customize-control-kirki-color-palette {
+    .colors-wrapper {
+      &#input_theme_primary_color,
+      &#input_theme_accent_color,
+      &#input_blog_entries_header_bg_color {
+        overflow: initial !important;
+      }
+
+      &.round label {
+        padding: 6px;
+      }
+    }
+  }
+
+  // my styles
+  .mdl-customizer-section-title {
+    display: block;
+    margin: 0 -12px;
+    padding: 13px 12px;
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #ddd;
+    border-left: 0;
+    border-right: 0;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1;
+    text-transform: uppercase;
+    cursor: default;
+  }
+
+  .mdl-customizer-section-button {
+
+  }
+}
