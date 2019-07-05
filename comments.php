@@ -27,12 +27,12 @@ if (post_password_required()) {
     <?php // You can start editing here -- including this comment! ?>
 
     <?php if (have_comments()) : ?>
-        <h3 class="comments-title">
+        <h4 class="comments-title">
             <?php
             printf(_nx('One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'material-design-lite'),
                 number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>');
             ?>
-        </h3>
+        </h4>
 
         <ol class="comment-list">
             <?php
@@ -68,6 +68,7 @@ if (post_password_required()) {
     $req = get_option('require_name_email');
     $aria_req = ($req ? " aria-required='true' data-required=''" : '');
     $req_optional = $req ? '' : ' ' . __('(optional)', 'material-design-lite');
+    $comment_field_label = '0' != get_comments_number() ? __('Join the discussion', 'material-design-lite') : __('Start the discussion', 'material-design-lite');
 
     $comments_args = array(
         // change the title of send button
@@ -89,7 +90,7 @@ if (post_password_required()) {
         // redefine your own textarea (the comment body)
         'comment_field' => '<div class="mdl-cell mdl-cell--12-col mvn"><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">' .
             '<textarea class="mdl-textfield__input js-sp-mdl-comment-textearea" rows="1" data-autoresize id="comment" name="comment" aria-required="true"></textarea>' .
-            '<label class="mdl-textfield__label" for="comment">' . __('Join the discussion', 'material-design-lite') . '</label></div></div>',
+            '<label class="mdl-textfield__label" for="comment">' . $comment_field_label . '</label></div></div>',
 
         'fields' => apply_filters('comment_form_default_fields', array(
             'author' =>
