@@ -109,7 +109,7 @@ add_action('after_setup_theme', 'sp_mdl_content_width', 0);
 function sp_mdl_theme_custom_css()
 {
     $content_width = get_theme_mod('section_content_width', $GLOBALS['content_width']);
-    $content_inner_width = get_theme_mod('section_content_inner_width', 512);
+    $content_inner_width = get_theme_mod('section_content_inner_width', 830);
     $accent_color = sp_mdl_color_wheel('accent')[sp_mdl_get_accent_color()];
 
     $custom_css = '
