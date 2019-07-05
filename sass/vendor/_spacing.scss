@@ -9,13 +9,13 @@
  *a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
  *s,m,l,n = small($spaceS),medium($spaceM),large($spaceL),none(0)
  */
-$null:               rem(0px) !default;
-$extra-small:        rem(5px) !default;
-$small:             rem(10px) !default;
-$medium:            rem(15px) !default;
-$large:             rem(25px) !default;
-$extra-large:       rem(40px) !default;
-$extra-extra-large: rem(60px) !default;
+$null:               0px !default;
+$extra-small:        5px !default;
+$small:             10px !default;
+$medium:            15px !default;
+$large:             25px !default;
+$extra-large:       40px !default;
+$extra-extra-large: 60px !default;
 
 
 .ptn, .pvn, .pan { padding-top:     $null !important; }

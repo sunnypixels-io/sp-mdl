@@ -153,227 +153,227 @@
  *s,m,l,n = small($spaceS),medium($spaceM),large($spaceL),none(0)
  */
 .ptn, .pvn, .pan {
-  padding-top: rem(0px) !important;
+  padding-top: 0px !important;
 }
 
 .prn, .phn, .pan {
-  padding-right: rem(0px) !important;
+  padding-right: 0px !important;
 }
 
 .pbn, .pvn, .pan {
-  padding-bottom: rem(0px) !important;
+  padding-bottom: 0px !important;
 }
 
 .pln, .phn, .pan {
-  padding-left: rem(0px) !important;
+  padding-left: 0px !important;
 }
 
 .mtn, .mvn, .man {
-  margin-top: rem(0px) !important;
+  margin-top: 0px !important;
 }
 
 .mrn, .mhn, .man {
-  margin-right: rem(0px) !important;
+  margin-right: 0px !important;
 }
 
 .mbn, .mvn, .man {
-  margin-bottom: rem(0px) !important;
+  margin-bottom: 0px !important;
 }
 
 .mln, .mhn, .man {
-  margin-left: rem(0px) !important;
+  margin-left: 0px !important;
 }
 
 .ptxs, .pvxs, .paxs {
-  padding-top: rem(5px) !important;
+  padding-top: 5px !important;
 }
 
 .prxs, .phxs, .paxs {
-  padding-right: rem(5px) !important;
+  padding-right: 5px !important;
 }
 
 .pbxs, .pvxs, .paxs {
-  padding-bottom: rem(5px) !important;
+  padding-bottom: 5px !important;
 }
 
 .plxs, .phxs, .paxs {
-  padding-left: rem(5px) !important;
+  padding-left: 5px !important;
 }
 
 .mtxs, .mvxs, .maxs {
-  margin-top: rem(5px) !important;
+  margin-top: 5px !important;
 }
 
 .mrxs, .mhxs, .maxs {
-  margin-right: rem(5px) !important;
+  margin-right: 5px !important;
 }
 
 .mbxs, .mvxs, .maxs {
-  margin-bottom: rem(5px) !important;
+  margin-bottom: 5px !important;
 }
 
 .mlxs, .mhxs, .maxs {
-  margin-left: rem(5px) !important;
+  margin-left: 5px !important;
 }
 
 .ptsm, .pvsm, .pasm {
-  padding-top: rem(10px) !important;
+  padding-top: 10px !important;
 }
 
 .prsm, .phsm, .pasm {
-  padding-right: rem(10px) !important;
+  padding-right: 10px !important;
 }
 
 .pbsm, .pvsm, .pasm {
-  padding-bottom: rem(10px) !important;
+  padding-bottom: 10px !important;
 }
 
 .plsm, .phsm, .pasm {
-  padding-left: rem(10px) !important;
+  padding-left: 10px !important;
 }
 
 .mtsm, .mvsm, .masm {
-  margin-top: rem(10px) !important;
+  margin-top: 10px !important;
 }
 
 .mrsm, .mhsm, .masm {
-  margin-right: rem(10px) !important;
+  margin-right: 10px !important;
 }
 
 .mbsm, .mvsm, .masm {
-  margin-bottom: rem(10px) !important;
+  margin-bottom: 10px !important;
 }
 
 .mlsm, .mhsm, .masm {
-  margin-left: rem(10px) !important;
+  margin-left: 10px !important;
 }
 
 .ptmd, .pvmd, .pamd {
-  padding-top: rem(15px) !important;
+  padding-top: 15px !important;
 }
 
 .prmd, .phmd, .pamd {
-  padding-right: rem(15px) !important;
+  padding-right: 15px !important;
 }
 
 .pbmd, .pvmd, .pamd {
-  padding-bottom: rem(15px) !important;
+  padding-bottom: 15px !important;
 }
 
 .plmd, .phmd, .pamd {
-  padding-left: rem(15px) !important;
+  padding-left: 15px !important;
 }
 
 .mtmd, .mvmd, .mamd {
-  margin-top: rem(15px) !important;
+  margin-top: 15px !important;
 }
 
 .mrmd, .mhmd, .mamd {
-  margin-right: rem(15px) !important;
+  margin-right: 15px !important;
 }
 
 .mbmd, .mvmd, .mamd {
-  margin-bottom: rem(15px) !important;
+  margin-bottom: 15px !important;
 }
 
 .mlmd, .mhmd, .mamd {
-  margin-left: rem(15px) !important;
+  margin-left: 15px !important;
 }
 
 .ptlg, .pvlg, .palg {
-  padding-top: rem(25px) !important;
+  padding-top: 25px !important;
 }
 
 .prlg, .phlg, .palg {
-  padding-right: rem(25px) !important;
+  padding-right: 25px !important;
 }
 
 .pblg, .pvlg, .palg {
-  padding-bottom: rem(25px) !important;
+  padding-bottom: 25px !important;
 }
 
 .pllg, .phlg, .palg {
-  padding-left: rem(25px) !important;
+  padding-left: 25px !important;
 }
 
 .mtlg, .mvlg, .malg {
-  margin-top: rem(25px) !important;
+  margin-top: 25px !important;
 }
 
 .mrlg, .mhlg, .malg {
-  margin-right: rem(25px) !important;
+  margin-right: 25px !important;
 }
 
 .mblg, .mvlg, .malg {
-  margin-bottom: rem(25px) !important;
+  margin-bottom: 25px !important;
 }
 
 .mllg, .mhlg, .malg {
-  margin-left: rem(25px) !important;
+  margin-left: 25px !important;
 }
 
 .mtxl, .mvxl, .maxl {
-  margin-top: rem(40px) !important;
+  margin-top: 40px !important;
 }
 
 .mbxl, .mvxl, .maxl {
-  margin-bottom: rem(40px) !important;
+  margin-bottom: 40px !important;
 }
 
 .mlxl, .mhxl, .maxl {
-  margin-left: rem(40px) !important;
+  margin-left: 40px !important;
 }
 
 .mrxl, .mhxl, .maxl {
-  margin-right: rem(40px) !important;
+  margin-right: 40px !important;
 }
 
 .ptxl, .pvxl, .paxl {
-  padding-top: rem(40px) !important;
+  padding-top: 40px !important;
 }
 
 .pbxl, .pvxl, .paxl {
-  padding-bottom: rem(40px) !important;
+  padding-bottom: 40px !important;
 }
 
 .plxl, .phxl, .paxl {
-  padding-left: rem(40px) !important;
+  padding-left: 40px !important;
 }
 
 .prxl, .phxl, .paxl {
-  padding-right: rem(40px) !important;
+  padding-right: 40px !important;
 }
 
 .mtxxl, .mvxxl, .maxxl {
-  margin-top: rem(60px) !important;
+  margin-top: 60px !important;
 }
 
 .mbxxl, .mvxxl, .maxxl {
-  margin-bottom: rem(60px) !important;
+  margin-bottom: 60px !important;
 }
 
 .mlxxl, .mhxxl, .maxxl {
-  margin-left: rem(60px) !important;
+  margin-left: 60px !important;
 }
 
 .mrxxl, .mhxxl, .maxxl {
-  margin-right: rem(60px) !important;
+  margin-right: 60px !important;
 }
 
 .ptxxl, .pvxxl, .paxxl {
-  padding-top: rem(60px) !important;
+  padding-top: 60px !important;
 }
 
 .pbxxl, .pvxxl, .paxxl {
-  padding-bottom: rem(60px) !important;
+  padding-bottom: 60px !important;
 }
 
 .plxxl, .phxxl, .paxxl {
-  padding-left: rem(60px) !important;
+  padding-left: 60px !important;
 }
 
 .prxxl, .phxxl, .paxxl {
-  padding-right: rem(60px) !important;
+  padding-right: 60px !important;
 }
 
 .mla, .mha, .maa {
@@ -742,6 +742,11 @@ textarea {
   font-size: 1rem;
 }
 
+textarea {
+  box-sizing: border-box;
+  resize: none;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -804,6 +809,11 @@ textarea {
 }
 .mdl-post-navigation > .mdl-post-navigation__button:last-child .mdl-button {
   margin-left: 16px;
+}
+
+.mdl-layout__drawer .mdl-layout-title {
+  line-height: initial;
+  padding: 20px 10px 20px 40px;
 }
 
 .mdl-page-links {
@@ -1130,6 +1140,9 @@ textarea {
   -ms-flex-pack: center;
       justify-content: center;
 }
+.site-main.mdl-site-main a {
+  text-decoration: none;
+}
 
 .single-post .entry-content .entry-content__inner {
   max-width: 512px;
@@ -1159,93 +1172,121 @@ textarea {
   padding-left: 20px;
   padding-right: 20px;
 }
-.comments .comment-content a {
-  word-wrap: break-word;
+.comments ol.comment-list {
+  padding-left: 0;
 }
-.comments .comment-content iframe {
+.comments ol.comment-list,
+.comments ol.comment-list ol.children {
+  list-style: none;
+}
+.comments .comment > .comment__header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.comments .comment > .comment__header > .comment__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  margin-right: 16px;
+  transition: all .2s ease-in-out;
+}
+.comments .comment > .comment__header > .comment__author {
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.comments .comment > .comment__header > .comment__author strong,
+.comments .comment > .comment__header > .comment__author span {
+  font-weight: 400;
+  line-height: 18px;
+}
+.comments .comment > .comment__header > .comment__author a.url {
+  text-decoration: none;
+  font-weight: 400;
+}
+.comments .comment > .comment__header > .comment__author a.url:not(:hover) {
+  color: #616161;
+}
+.comments .comment > .comment__text {
+  line-height: 1.5em;
+}
+.comments .comment > .comment__text a {
+  word-wrap: break-word;
+  text-decoration: none;
+}
+.comments .comment > .comment__text iframe {
   max-width: 100%;
 }
-.comments .comment-content img {
+.comments .comment > .comment__text img {
   max-width: 100%;
   height: auto;
 }
-
-.comments-area {
-  padding: 35px;
+.comments .comment > .comment__actions {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 0.8em;
+  margin-bottom: 16px;
 }
-
-.comments-title, .comment-reply-title {
-  padding-bottom: 9px;
-  margin: 40px 0 20px 0;
-  border-bottom: 1px solid #eee;
+.comments .comment > .comment__actions a {
+  margin-right: 16px;
+  color: rgba(0, 0, 0, 0.34);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  align-items: center;
 }
-
-ol.comment-list {
-  list-style: none;
-  padding-left: 0;
+.comments .comment > .comment__actions a:hover {
+  color: rgba(0, 0, 0, 0.74);
 }
-
-.comment-author .avatar {
-  margin-right: 25px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  transition: all .2s ease-in-out;
-  padding: 4px;
+.comments .comment > .comment__actions a i {
+  margin-right: 4px;
 }
-
-.comment-meta {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.comment-details {
-  overflow: hidden;
-  zoom: 1;
-  margin-bottom: 25px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #ddd;
-}
-
-.comment-details .reply {
-  margin-top: 10px;
-}
-
-.comment-date a {
-  font-size: 11px;
-  color: #777;
-  margin-right: 10px;
-}
-
-#commentform #comment {
+.comments #commentform #comment {
   width: 100% !important;
 }
-
-#commentform .mdl-textfield {
+.comments #commentform .mdl-textfield {
   width: 100% !important;
 }
-
-#commentform #submit {
-  position: relative;
-  padding: 8px 30px;
-  border: 0;
-  margin: 10px 1px;
-  cursor: pointer;
-  border-radius: 2px;
-  text-transform: uppercase;
+.comments #commentform .logged-in-as a {
+  font-weight: 400;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.84);
-  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  outline: 0 !important;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
-  color: rgba(0, 0, 0, 0.84);
-  background-color: transparent;
-  border-color: #ccc;
 }
-
-#commentform #submit:hover {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+.comments #commentform .logged-in-as a:not(:hover) {
+  color: rgba(0, 0, 0, 0.74);
+}
+.comments #commentform .sp-mdl-comment-fields {
+  display: none;
+}
+.comments #commentform .mdl-textfield__note {
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  opacity: .8;
+  position: absolute;
+}
+.comments #cancel-comment-reply-link {
+  color: rgba(0, 0, 0, 0.34);
+}
+.comments #cancel-comment-reply-link:hover {
+  color: rgba(0, 0, 0, 0.74);
 }
 
 .mdl-mega-footer {

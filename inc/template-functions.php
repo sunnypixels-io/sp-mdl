@@ -7,6 +7,8 @@
 
 /**
  * Get theme name
+ *
+ * @since 1.0.0
  */
 function sp_mdl_theme_branding($sanitize = false)
 {
@@ -21,6 +23,8 @@ function sp_mdl_theme_branding($sanitize = false)
 
 /**
  * Get theme version
+ *
+ * @since 1.0.0
  */
 function sp_mdl_theme_version()
 {
@@ -31,6 +35,21 @@ function sp_mdl_theme_version()
     return $version;
 }
 
+/**
+ * Get scripts and styles postfix
+ *
+ * @since 1.0.0
+ */
+function sp_mdl_scripts_postfix()
+{
+    $postfix = (SP_MDL_DEBUG) ? '' : '.min';
+
+    if (defined('SP_DEVELOP_MODE')) {
+        $postfix = '.dev';
+    }
+
+    return $postfix;
+}
 
 /**
  * Adds classes to the html tag
@@ -328,3 +347,178 @@ function sp_mdl_localize_script($case)
 
     return apply_filters('sp_localize_array', $array);
 }
+
+/**
+ * Comments and pingbacks
+ *
+ * @since 1.0.0
+ */
+if (!function_exists('sp_mdl_comment')) {
+
+    function sp_mdl_comment($comment, $args, $depth)
+    {
+
+        switch ($comment->comment_type) :
+            case 'pingback' :
+            case 'trackback' :
+                // Display trackbacks differently than normal comments.
+                ?>
+
+                <li <?php comment_class('comment mdl-color-text--grey-700'); ?> id="comment-<?php comment_ID(); ?>">
+
+                <article id="comment-<?php comment_ID(); ?>" class="comment-container">
+                    <p><?php esc_html_e('Pingback:', 'material-design-lite'); ?>
+                        <span><span itemprop="name"><?php comment_author_link(); ?></span></span> <?php edit_comment_link(esc_html__('(Edit)', 'material-design-lite'), '<span class="edit-link">', '</span>'); ?>
+                    </p>
+                </article>
+
+                <?php
+                break;
+            default :
+                // Proceed with normal comments.
+                global $post;
+                ?>
+
+            <li id="comment-<?php comment_ID(); ?>" class="comment-container comment mdl-color-text--grey-700">
+
+
+                <article <?php comment_class('comment-body'); ?>>
+
+                    <header class="comment__header">
+
+                        <?php echo get_avatar($comment, 48, '', '', array('class' => 'comment__avatar')); ?>
+
+                        <div class="comment__author">
+                            <strong><?php printf(esc_html__('%s ', 'material-design-lite'), sprintf('%s', get_comment_author_link())); ?></strong>
+                            <span class="comment-meta commentmetadata">
+                                <span class="comment-date"><?php comment_date(); // 'j M Y'
+                                    ?></span>
+                            </span>
+                        </div>
+
+                        <?php edit_comment_link('<i class="material-icons">create</i>', '', ''); ?>
+
+                    </header>
+
+                    <div class="comment__text">
+                        <?php if ('0' == $comment->comment_approved) : ?>
+                            <p class="comment-awaiting-moderation"><?php esc_html_e('Your comment is awaiting moderation.', 'material-design-lite'); ?></p>
+                        <?php endif; ?>
+                        <?php comment_text(); ?>
+                    </div>
+
+                    <nav class="comment__actions">
+
+
+                        <?php
+                        comment_reply_link(array_merge($args, array(
+                            'depth' => $depth,
+                            'max_depth' => $args['max_depth'],
+                            'reply_text' => '<i class="material-icons">reply</i>' . __('Reply', 'material-design-lite'),
+                            //'reply_to_textz' => '',
+                            //'login_text'    => '',
+                        )));
+                        ?>
+                    </nav>
+
+                </article><!-- #comment-## -->
+
+                <?php
+                break;
+        endswitch; // end comment_type check
+    }
+
+}
+
+/**
+ * Filter for comment reply link
+ *
+ * @param string $link The HTML markup for the comment reply link.
+ * @param array $args An array of arguments overriding the defaults.
+ * @param object $comment The object of the comment being replied.
+ * @param WP_Post $post The WP_Post object.
+ * @return mixed
+ *
+ * @since 1.0.0
+ */
+if (!function_exists('sp_mdl_filter_comment_reply_link')) :
+    function sp_mdl_filter_comment_reply_link($link)
+    {
+        $link = str_replace("class='comment-reply-link",
+            "class='comment-reply-link mdl-button mdl-js-button mdl-js-ripple-effect", $link);
+        return $link;
+    }
+
+    add_filter('comment_reply_link', 'sp_mdl_filter_comment_reply_link', 10);
+endif;
+
+/**
+ * Filter for comment edit link
+ *
+ * @param string $link The HTML markup for the comment reply link.
+ * @param array $args An array of arguments overriding the defaults.
+ * @param object $comment The object of the comment being replied.
+ * @param WP_Post $post The WP_Post object.
+ * @return mixed
+ *
+ * @since 1.0.0
+ */
+if (!function_exists('sp_mdl_filter_edit_comment_link')) :
+    function sp_mdl_filter_edit_comment_link($link)
+    {
+        $link = str_replace('class="comment-edit-link',
+            'class="comment-edit-link mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon', $link);
+        return $link;
+    }
+
+    add_filter('edit_comment_link', 'sp_mdl_filter_edit_comment_link', 10);
+endif;
+
+
+/**
+ * Filter for comment edit link
+ *
+ * @param string $link The HTML markup for the comment reply link.
+ * @param array $args An array of arguments overriding the defaults.
+ * @param object $comment The object of the comment being replied.
+ * @param WP_Post $post The WP_Post object.
+ * @return mixed
+ *
+ * @since 1.0.0
+ */
+if (!function_exists('sp_mdl_filter_cancel_comment_reply_link')) :
+    function sp_mdl_filter_cancel_comment_reply_link($link)
+    {
+        $link = str_replace('id="cancel-comment-reply-link" ',
+            'id="cancel-comment-reply-link" class="mdl-button mdl-js-button mdl-js-ripple-effect"', $link);
+        return $link;
+    }
+
+    add_filter('cancel_comment_reply_link', 'sp_mdl_filter_cancel_comment_reply_link', 10);
+endif;
+
+/**
+ * Filter for comment edit link
+ *
+ * @param string $link The HTML markup for the comment reply link.
+ * @param array $args An array of arguments overriding the defaults.
+ * @param object $comment The object of the comment being replied.
+ * @param WP_Post $post The WP_Post object.
+ * @return mixed
+ *
+ * @since 1.0.0
+ */
+if (!function_exists('sp_mdl_filter_comment_form_logged_in')) :
+    function sp_mdl_filter_comment_form_logged_in($args_logged_in)
+    {
+        $args_logged_in = str_replace('<p class="logged-in-as">',
+            '<div class="logged-in-as mdl-cell mdl-cell--12-col ">', $args_logged_in);
+        $args_logged_in = str_replace('</p>',
+            '</div>', $args_logged_in);
+
+        return $args_logged_in;
+    }
+
+    add_filter('comment_form_logged_in', 'sp_mdl_filter_comment_form_logged_in', 10);
+endif;
+

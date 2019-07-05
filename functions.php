@@ -197,7 +197,7 @@ add_action('widgets_init', 'sp_mdl_widgets_init');
  */
 function sp_mdl_scripts()
 {
-    $min = (SP_MDL_DEBUG) ? '' : '.min';
+    $min = sp_mdl_scripts_postfix();
 
     $primary = sp_mdl_get_primary_color();
     $accent = sp_mdl_get_accent_color();
@@ -218,7 +218,7 @@ function sp_mdl_scripts()
     wp_enqueue_style('google-fonts-roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
     //wp_enqueue_style( 'material-design-lite-style', get_stylesheet_uri() ); // I don't like a classic way for CSS
-    wp_enqueue_style('sp-mdl-style', get_template_directory_uri() . '/assets/css/material-design-lite.css', array(), sp_mdl_theme_version()); // already minifed ;) but we have MAP file
+    wp_enqueue_style('sp-mdl-style', get_template_directory_uri() . '/assets/css/material-design-lite' . $min . '.css', array(), sp_mdl_theme_version()); // already minifed ;) but we have MAP file
     wp_add_inline_style('sp-mdl-style', sp_mdl_theme_custom_css());
 
     wp_enqueue_script('sp-mdl-scripts', get_template_directory_uri() . '/assets/js/material-design-lite' . $min . '.js', array('jquery'), sp_mdl_theme_version(), true);
@@ -240,14 +240,14 @@ add_action('wp_enqueue_scripts', 'sp_mdl_scripts');
  */
 function sp_mdl_admin_scripts()
 {
-    $min = (SP_MDL_DEBUG) ? '' : '.min';
+    $min = sp_mdl_scripts_postfix();
 
     if (is_admin()) {
         // Enqueue jQuery UI and autocomplete
         wp_enqueue_script( 'jquery-ui-core' );
         wp_enqueue_script( 'jquery-ui-autocomplete' );
 
-        wp_enqueue_style('sp-mdl-admin', get_template_directory_uri() . '/assets/css/admin.css', array(), sp_mdl_theme_version());
+        wp_enqueue_style('sp-mdl-admin', get_template_directory_uri() . '/assets/css/admin' . $min . '.css', array(), sp_mdl_theme_version());
 
         wp_enqueue_script('sp-mdl-js-admin', get_template_directory_uri() . '/assets/js/admin' . $min . '.js', array('jquery', 'jquery-ui-core', 'jquery-ui-autocomplete'), sp_mdl_theme_version(), true);
         wp_localize_script('sp-mdl-js-admin','MDL_ADMIN_CONFIG', sp_mdl_localize_script('admin'));

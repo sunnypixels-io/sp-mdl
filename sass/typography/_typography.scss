@@ -10,6 +10,11 @@ textarea {
 	//line-height: $font__line-height-body;
 }
 
+textarea {
+	box-sizing: border-box;
+	resize: none;
+}
+
 //@import "headings";
 
 //@import "copy";

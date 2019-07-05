@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="mdl-layout__drawer">
+<div id="menu-drawer" class="mdl-layout__drawer">
     <span class="mdl-layout-title"><?php bloginfo('name'); ?></span>
     <?php
     $args = array(

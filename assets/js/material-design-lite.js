@@ -43,9 +43,10 @@ class MDL {
     _initTriggers() {
         this._debugLog('_initTriggers()');
 
+        // Bookmarks
         jQuery('.mdl-js-bookmark-this').on('click', function (e) {
-            var bookmarkURL = window.location.href;
-            var bookmarkTitle = document.title;
+            let bookmarkURL = window.location.href;
+            let bookmarkTitle = document.title;
 
             if ('addToHomescreen' in window && addToHomescreen.isCompatible) {
                 // Mobile browsers
@@ -75,6 +76,28 @@ class MDL {
             }
 
             return false;
+        });
+
+        // show hidden fields for comment area
+        jQuery('.js-sp-mdl-comment-textearea').not('active').on('keyup input', function () {
+            setTimeout(function () {
+                jQuery('.js-sp-mdl-comment-fields').slideDown('slow');
+            }, 300);
+        }).addClass('active');
+
+        /**
+         * Autoresize textarea
+         * @link https://stephanwagner.me/auto-resizing-textarea
+         */
+        jQuery.each(jQuery('textarea[data-autoresize]'), function () {
+            let offset = this.offsetHeight - this.clientHeight;
+
+            let resizeTextarea = function (el) {
+                jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+            };
+            jQuery(this).on('keyup input', function () {
+                resizeTextarea(this);
+            }).removeAttr('data-autoresize');
         });
     }
 
