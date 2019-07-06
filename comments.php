@@ -15,10 +15,11 @@
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
-if (post_password_required()) {
+if (post_password_required() ||
+    !get_theme_mod('comments_enabled', true) ||
+    (!get_theme_mod('comments_enabled_4_pages', true) && is_page())) {
     return;
 }
-// TODO: a lot of work should looks like https://getmdl.io/templates/blog/entry.html
 ?>
 
 

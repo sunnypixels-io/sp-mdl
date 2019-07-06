@@ -330,13 +330,39 @@ if (class_exists('Kirki')) :
         'priority'    => 195,
     ) );
 
-        // TODO add option to disable all comments!
-        Kirki::add_field( 'material_design_lite', [
+        Kirki::add_field( 'sp_mdl_theme', [
             'type'        => 'custom',
             'settings'    => 'comments_title',
             'section'     => 'sp_mdl_theme_comments',
             'default'     => kirki_custom_title( 'Comments'),
             'priority'    => 130,
+        ] );
+
+        Kirki::add_field( 'sp_mdl_theme', [
+            'type'        => 'toggle',
+            'settings'    => 'comments_enabled',
+            'label'       => esc_html__( 'Enable comments on website', 'material-design-lite' ),
+            'description' => esc_html__( "Enable or disable the comments, for the entire site.", 'material-design-lite' ),
+            'section'     => 'sp_mdl_theme_comments',
+            'default'     => '1',
+            'priority'    => 131,
+        ] );
+
+        Kirki::add_field( 'sp_mdl_theme', [
+            'type'        => 'toggle',
+            'settings'    => 'comments_enabled_4_pages',
+            'label'       => esc_html__( 'Enable comments on pages', 'material-design-lite' ),
+            'description' => esc_html__( "Enable or disable the pages comments, for the entire site.", 'material-design-lite' ),
+            'section'     => 'sp_mdl_theme_comments',
+            'default'     => '1',
+            'priority'    => 131,
+            'active_callback' => [
+                [
+                    'setting'  => 'comments_enabled',
+                    'operator' => '==',
+                    'value'    => true,
+                ]
+            ],
         ] );
 
         // TODO add option to choose disqus, replybox or native comment system
