@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunny-pixels/material-design-lite.git"
+    "url": "git+https://github.com/sunny-pixels/sp-mdl-theme.git"
   },
   "keywords": [
     "_S",
@@ -37,7 +37,7 @@
   },
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/sunny-pixels/material-design-lite/issues"
+    "url": "https://github.com/sunny-pixels/sp-mdl-theme/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
