@@ -1,5 +1,6 @@
 #customize-controls .customize-control-kirki-color-palette .colors-wrapper#input_theme_primary_color, #customize-controls .customize-control-kirki-color-palette .colors-wrapper#input_theme_accent_color, #customize-controls .customize-control-kirki-color-palette .colors-wrapper#input_blog_entries_header_bg_color {
   overflow: initial !important;
+  padding-bottom: 40px;
 }
 #customize-controls .customize-control-kirki-color-palette .colors-wrapper.round label {
   padding: 6px;

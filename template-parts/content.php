@@ -23,8 +23,8 @@
 
         <div class="entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
             <?php
-            if (get_theme_mod('section_blog_entries_content_excerpt', false)) :
-                echo mb_substr(get_the_excerpt(), 0, get_theme_mod('section_blog_entries_content_excerpt_substr', 500)) . '...';
+            if (get_theme_mod('blog_entries_content_excerpt', false)) :
+                echo mb_substr(get_the_excerpt(), 0, get_theme_mod('blog_entries_content_excerpt_substr', 500)) . '...';
                 echo sp_mdl_modify_read_more_link();
             else :
                 the_content(sprintf(
@@ -37,7 +37,7 @@
         </div><!-- .entry-content -->
 
         <?php
-        if (!get_theme_mod('section_blog_entries_content_excerpt', false)) :
+        if (!get_theme_mod('blog_entries_content_excerpt', false)) :
             wp_link_pages(array(
                 'before' => '<div class="mdl-page-links mdl-card__actions mdl-card--border"><span class="mdl-button mdl-js-button entry-page-links__title" disabled>' . esc_html__('Pages:', 'material-design-lite') . '</span>',
                 'after' => '</div>',
