@@ -126,9 +126,7 @@ function sp_mdl_theme_custom_css()
 		}
     ';
 
-    $custom_css .= apply_filters('sp_mdl_theme_custom_css', '');
-
-    return $custom_css;
+    return apply_filters('sp_mdl_theme_custom_css', $custom_css);
 }
 
 /**
@@ -202,19 +200,11 @@ function sp_mdl_scripts()
     $primary = sp_mdl_get_primary_color();
     $accent = sp_mdl_get_accent_color();
 
-    // optional for page speed performance
-    $cdnjs_cloudflare = get_theme_mod('cdnjs_cloudflare', false);
+    wp_enqueue_style('mdl-css', 'https://storage.googleapis.com/code.getmdl.io/1.3.0/material.' . $primary . '-' . $accent . '.min.css', array(), '1.3.0');
+    wp_enqueue_style('mdl-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons');
+    wp_enqueue_script('mdl-js', 'https://storage.googleapis.com/code.getmdl.io/1.3.0/material.min.js', array(), '1.3.0', true);
 
-    if ($cdnjs_cloudflare) {
-        wp_enqueue_style('mdl-css', 'https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.' . $primary . '-' . $accent . '.min.css', array(), '1.3.0');
-        wp_enqueue_style('mdl-icons', 'https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css', array(), '3.0.1');
-        wp_enqueue_script('mdl-js', 'https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.min.js', array(), '1.3.0', true);
-    } else {
-        wp_enqueue_style('mdl-css', 'https://storage.googleapis.com/code.getmdl.io/1.3.0/material.' . $primary . '-' . $accent . '.min.css', array(), '1.3.0');
-        wp_enqueue_style('mdl-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons');
-        wp_enqueue_script('mdl-js', 'https://storage.googleapis.com/code.getmdl.io/1.3.0/material.min.js', array(), '1.3.0', true);
-    }
-
+    // TODO, create function for select fonts assets for Theme also include MDL icons to one query
     wp_enqueue_style('google-fonts-roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
     //wp_enqueue_style( 'material-design-lite-style', get_stylesheet_uri() ); // I don't like a classic way for CSS
@@ -310,3 +300,10 @@ require get_template_directory() . '/inc/widgets/register-widgets.php';
 if (class_exists('WooCommerce')) {
     require get_template_directory() . '/inc/woocommerce.php';
 }
+
+function xxx($x){
+    $x .= '/* SETUP DONE */';
+    return $x;
+}
+
+add_filter('sp_mdl_theme_custom_css', 'xxx');

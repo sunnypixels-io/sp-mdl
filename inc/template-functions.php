@@ -117,6 +117,7 @@ add_action('wp_head', 'sp_mdl_pingback_header');
 
 /**
  * Check is plugin active
+ * TODO: this function just for feature releases
  */
 function sp_mdl_is_plugin_active($plugin_slug)
 {
@@ -286,82 +287,85 @@ function sp_mdl_modify_read_more_link()
 add_filter('the_content_more_link', 'sp_mdl_modify_read_more_link');
 
 
-/**
- *
- */
-function sp_mdl_get_source_for_autocomplete()
-{
-    $source = array();
+if (!function_exists('sp_mdl_get_source_for_autocomplete')) :
+    function sp_mdl_get_source_for_autocomplete()
+    {
+        $source = array();
 
-    $args = array(
-        'post_type' => apply_filters('sp_mdl_autocomplete_source_post_type', array('post', 'page')),
-        'post_status' => 'publish',
-        'posts_per_page' => -1 // all posts
-    );
+        $args = array(
+            'post_type' => apply_filters('sp_mdl_autocomplete_source_post_type', array('post', 'page')),
+            'post_status' => 'publish',
+            'posts_per_page' => -1 // all posts
+        );
 
-    if ($posts = get_posts($args)) :
-        foreach ($posts as $k => $post) {
-            $source[$k]['id'] = $post->ID;
-            $source[$k]['label'] = $post->post_title; // The name of the post
-            $source[$k]['value'] = get_permalink($post->ID);
-        }
-    endif;
+        if ($posts = get_posts($args)) :
+            foreach ($posts as $k => $post) {
+                $source[$k]['id'] = $post->ID;
+                $source[$k]['label'] = $post->post_title; // The name of the post
+                $source[$k]['value'] = get_permalink($post->ID);
+            }
+        endif;
 
-    return $source;
-}
-
-
-function sp_mdl_edit_post_link($post_id = 0)
-{
-    if ($post_id === 0)
-        $post_id = rand(1000, 9999);
-
-    $edit_button = '<i id="sp-tt-' . $post_id . '" class="material-icons">create</i>';
-    $edit_button .= '<span class="mdl-tooltip mdl-tooltip--right" data-mdl-for="sp-tt-' . $post_id . '">' . sprintf(__('Edit %s', 'material-design-lite'), get_post_type($post_id)) . '</span>';
-
-    edit_post_link($edit_button, '', '', '', 'post-edit-link mdl-button mdl-js-button mdl-button--icon');
-}
-
-
-function sp_mdl_localize_script($case)
-{
-    switch ($case) {
-        case 'public':
-            $array = array(
-                'debug' => SP_MDL_DEBUG,
-                'theme' => wp_get_theme()->name
-            );
-            break;
-
-        case 'admin':
-            $array = array(
-                'debug' => SP_MDL_DEBUG,
-                'autocompiteSource' => sp_mdl_get_source_for_autocomplete()
-            );
-            break;
-
-        default:
-            $array = array();
-            break;
+        return $source;
     }
+endif;
 
-    return apply_filters('sp_localize_array', $array);
-}
+
+if (!function_exists('sp_mdl_edit_post_link')) :
+    function sp_mdl_edit_post_link($post_id = 0)
+    {
+        if ($post_id === 0)
+            $post_id = rand(1000, 9999);
+
+        $edit_button = '<i id="sp-tt-' . $post_id . '" class="material-icons">create</i>' .
+            '<span class="mdl-tooltip mdl-tooltip--right" data-mdl-for="sp-tt-' . $post_id . '">' .
+            sprintf(__('Edit %s', 'material-design-lite'), get_post_type($post_id)) . '</span>';
+
+        edit_post_link($edit_button, '', '', '', 'post-edit-link mdl-button mdl-js-button mdl-button--icon');
+    }
+endif;
+
+
+if (!function_exists('sp_mdl_localize_script')) :
+    function sp_mdl_localize_script($case)
+    {
+        switch ($case) {
+            case 'public':
+                $array = array(
+                    'debug' => SP_MDL_DEBUG,
+                    'theme' => wp_get_theme()->name
+                );
+                break;
+
+            case 'admin':
+                $array = array(
+                    'debug' => SP_MDL_DEBUG,
+                    'autocompiteSource' => sp_mdl_get_source_for_autocomplete()
+                );
+                break;
+
+            default:
+                $array = array();
+                break;
+        }
+
+        return apply_filters('sp_localize_array', $array);
+    }
+endif;
 
 /**
  * Comments and pingbacks
  *
  * @since 1.0.0
  */
-if (!function_exists('sp_mdl_comment')) {
-
+if (!function_exists('sp_mdl_comment')) :
     function sp_mdl_comment($comment, $args, $depth)
     {
-
         switch ($comment->comment_type) :
             case 'pingback' :
             case 'trackback' :
                 // Display trackbacks differently than normal comments.
+                // TODO: check it and perhaps refactor
                 ?>
 
                 <li <?php comment_class('comment mdl-color-text--grey-700'); ?> id="comment-<?php comment_ID(); ?>">
@@ -427,8 +431,8 @@ if (!function_exists('sp_mdl_comment')) {
                 break;
         endswitch; // end comment_type check
     }
+endif;
 
-}
 
 /**
  * Filter for comment reply link
@@ -451,6 +455,7 @@ if (!function_exists('sp_mdl_filter_comment_reply_link')) :
 
     add_filter('comment_reply_link', 'sp_mdl_filter_comment_reply_link', 10);
 endif;
+
 
 /**
  * Filter for comment edit link
@@ -496,6 +501,7 @@ if (!function_exists('sp_mdl_filter_cancel_comment_reply_link')) :
 
     add_filter('cancel_comment_reply_link', 'sp_mdl_filter_cancel_comment_reply_link', 10);
 endif;
+
 
 /**
  * Filter for comment edit link

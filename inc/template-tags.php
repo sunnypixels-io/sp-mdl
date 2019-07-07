@@ -10,8 +10,6 @@
 if (!function_exists('sp_mdl_posts_navigation')) :
     /**
      * Display navigation to next/previous set of posts when applicable.
-     *
-     * @todo Remove this function when WordPress 4.3 is released.
      */
     function sp_mdl_posts_navigation()
     {
@@ -22,20 +20,25 @@ if (!function_exists('sp_mdl_posts_navigation')) :
         ?>
         <nav class="mdl-post-navigation mdl-color-text--grey-50 mdl-cell mdl-cell--12-col" role="navigation">
 
-            <?php if (get_previous_posts_link()) : ?>
-                <?php previous_posts_link(__('<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons">arrow_back</i>
-          </button> Newer', 'material-design-lite')); ?>
-            <?php endif; ?>
+            <?php
+            if (get_previous_posts_link()) :
+                previous_posts_link(sprintf(
+                    __('%s Newer', 'material-design-lite'),
+                    '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">arrow_back</i></button>'
+                ));
+            endif;
+            ?>
 
             <div class="section-spacer"></div>
-            <?php if (get_next_posts_link()) : ?>
-                <?php next_posts_link(__('Older
-          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons">arrow_forward</i>
-          </button>', 'material-design-lite')); ?>
-            <?php endif; ?>
 
+            <?php
+            if (get_next_posts_link()) :
+                next_posts_link(sprintf(
+                    __('Older %s', 'material-design-lite'),
+                    '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">arrow_forward</i></button>'
+                ));
+            endif;
+            ?>
 
         </nav><!-- .navigation -->
         <?php
@@ -45,8 +48,6 @@ endif;
 if (!function_exists('sp_mdl_post_navigation')) :
     /**
      * Display navigation to next/previous post when applicable.
-     *
-     * @todo Remove this function when WordPress 4.3 is released.
      */
     function sp_mdl_post_navigation()
     {
@@ -60,13 +61,14 @@ if (!function_exists('sp_mdl_post_navigation')) :
         ?>
         <nav class="mdl-post-navigation mdl-color-text--grey-50 mdl-cell mdl-cell--12-col" role="navigation">
             <?php
-            next_post_link('%link', '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons">arrow_back</i>
-          </button> Newer');
-            previous_post_link('%link', 'Older
-          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons">arrow_forward</i>
-          </button>');
+            next_post_link('%link', sprintf(
+                __('%s Newer', 'material-design-lite'),
+                '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">arrow_back</i></button>'
+            ));
+            previous_post_link('%link', sprintf(
+                __('Older %s', 'material-design-lite'),
+                '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">arrow_forward</i></button>'
+            ));
             ?>
         </nav><!-- .navigation -->
         <?php
@@ -209,25 +211,30 @@ if (!function_exists('sp_mdl_post_thumbnail')) :
 endif;
 
 
-/**
- * Filter to add class to next/previous navigation links
- */
-function sp_mdl_posts_link_attributes()
-{
-    return 'class="mdl-post-navigation__button"';
-}
+if (!function_exists('sp_mdl_posts_link_attributes')) :
+    /**
+     * Filter to add class to next/previous navigation links
+     */
+    function sp_mdl_posts_link_attributes()
+    {
+        return 'class="mdl-post-navigation__button"';
+    }
 
-add_filter('next_posts_link_attributes', 'sp_mdl_posts_link_attributes');
-add_filter('previous_posts_link_attributes', 'sp_mdl_posts_link_attributes');
+    add_filter('next_posts_link_attributes', 'sp_mdl_posts_link_attributes');
+    add_filter('previous_posts_link_attributes', 'sp_mdl_posts_link_attributes');
+endif;
 
-function sp_mdl_post_link_attributes($output)
-{
-    $class = 'class="mdl-post-navigation__button"';
-    return str_replace('<a href=', '<a ' . $class . ' href=', $output);
-}
 
-add_filter('next_post_link', 'sp_mdl_post_link_attributes');
-add_filter('previous_post_link', 'sp_mdl_post_link_attributes');
+if (!function_exists('sp_mdl_get_postcard_style')) :
+    function sp_mdl_post_link_attributes($output)
+    {
+        $class = 'class="mdl-post-navigation__button"';
+        return str_replace('<a href=', '<a ' . $class . ' href=', $output);
+    }
+
+    add_filter('next_post_link', 'sp_mdl_post_link_attributes');
+    add_filter('previous_post_link', 'sp_mdl_post_link_attributes');
+endif;
 
 
 if (!function_exists('sp_mdl_get_postcard_style')) :
