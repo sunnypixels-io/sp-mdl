@@ -531,3 +531,12 @@ if (!function_exists('sp_mdl_filter_comment_form_logged_in')) :
     add_filter('comment_form_logged_in', 'sp_mdl_filter_comment_form_logged_in', 10);
 endif;
 
+
+if (get_theme_mod('blog_entries_content_excerpt', false)) :
+    function sp_mdl_excerpt_length($length)
+    {
+        return get_theme_mod('blog_entries_content_excerpt_substr', 55);
+    }
+
+    add_filter('excerpt_length', 'sp_mdl_excerpt_length', 999);
+endif;

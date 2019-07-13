@@ -1010,14 +1010,6 @@ textarea {
 .site-main .mdl-card article .entry-footer {
   padding: 16px;
 }
-.site-main header h3 {
-  margin: 0;
-  color: #FFFFFF;
-}
-.site-main header h3 a {
-  color: #fff;
-  text-decoration: none;
-}
 .site-main .mdl-card__media {
   box-sizing: border-box;
   background-size: cover;
@@ -1039,6 +1031,33 @@ textarea {
   left: 24px;
   color: #FFFFFF;
   border: 1px solid #FFFFFF;
+}
+.site-main .sp-mdl-header--none {
+  display: none;
+}
+.site-main .sp-mdl-header--simple {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.site-main .sp-mdl-header--classic .mdl-card__media {
+  height: 240px;
+}
+.site-main .sp-mdl-header--colorful {
+  border-bottom: none;
+}
+.site-main .sp-mdl-header--colorful header h2 {
+  color: #FFFFFF;
+}
+.site-main .sp-mdl-header--colorful header h2 a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.site-main header h3 {
+  margin: 0;
+  color: #FFFFFF;
+}
+.site-main header h3 a {
+  color: #FFFFFF;
+  text-decoration: none;
 }
 .site-main .meta {
   box-sizing: border-box;
