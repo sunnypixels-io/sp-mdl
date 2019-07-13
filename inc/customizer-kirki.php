@@ -13,13 +13,13 @@ if (class_exists('Kirki')) :
     if (!function_exists('kirki_custom_title')) :
         function kirki_custom_title($title)
         {
-            return '<div class="mdl-customizer-section-title">' . esc_html__( $title, 'material-design-lite' ) . '</div>';
+            return '<div class="mdl-customizer-section-title">' . $title . '</div>';
         }
     endif;
     if (!function_exists('kirki_custom_button')) :
         function kirki_custom_button($title = 'Button', $class = '', $href = '#')
         {
-            return '<a class="mdl-customizer-section-button button-secondary button ' . $class . '" href="' . $href . '">' . strtoupper(esc_html__( $title, 'material-design-lite' )) . '</a>';
+            return '<a class="mdl-customizer-section-button button-secondary button ' . $class . '" href="' . $href . '">' . strtoupper($title) . '</a>';
         }
     endif;
 
@@ -40,7 +40,7 @@ if (class_exists('Kirki')) :
     Kirki::add_section( 'sp_mdl_theme__color', array(
         'title'          => esc_html__( 'Theme color', 'material-design-lite' ),
         'description'    => sprintf(
-            __( 'Select the primary and accent colors to be used for your site. %sMDL Color Wheel%s', 'material-design-lite' ), //TODO: add some note about same colors
+            __( 'Select the primary and accent colors to be used for your site. %sMDL Color Wheel%s', 'material-design-lite' ),
             '<a target="_blank" href="http://www.getmdl.io/customize/index.html">', '</a>'),
         'priority'       => 191,
     ) );

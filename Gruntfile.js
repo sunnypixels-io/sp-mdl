@@ -102,6 +102,7 @@ module.exports = function (grunt) {
                 src: [
                     '**',
                     '!.*',
+                    '!*.zip',
                     '!sass',
                     '!assets/css/*.dev.css',
                     '!assets/css/*.css.map',
@@ -192,6 +193,7 @@ module.exports = function (grunt) {
                     style: 'expanded'
                 },
                 files: {
+                    'assets/css/editor.dev.css': 'sass/editor.scss',
                     'assets/css/admin.dev.css': 'sass/admin.scss',
                     'assets/css/customizer.dev.css': 'sass/customizer.scss',
                     'assets/css/material-design-lite.dev.css': 'sass/material-design-lite.scss',
@@ -203,6 +205,7 @@ module.exports = function (grunt) {
         autoprefixer: {
             dist: {
                 files: {
+                    'assets/css/editor.css': 'assets/css/editor.dev.css',
                     'assets/css/admin.css': 'assets/css/admin.dev.css',
                     'assets/css/customizer.css': 'assets/css/customizer.dev.css',
                     'assets/css/material-design-lite.css': 'assets/css/material-design-lite.dev.css',
@@ -217,6 +220,7 @@ module.exports = function (grunt) {
                     report: 'min'
                 },
                 files: {
+                    'assets/css/editor.min.css': 'assets/css/editor.css',
                     'assets/css/admin.min.css': 'assets/css/admin.css',
                     'assets/css/customizer.min.css': 'assets/css/customizer.css',
                     'assets/css/material-design-lite.min.css': 'assets/css/material-design-lite.css',

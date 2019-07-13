@@ -113,7 +113,7 @@ function sp_mdl_register_required_plugins() {
         ),
 
 		array(
-			'name'      => 'Wordfence Security – Firewall & Malware Scan',
+			'name'      => 'Wordfence Security',
 			'slug'      => 'wordfence',
 			'required'  => false,
             'tags'      => 'security'

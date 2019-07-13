@@ -85,6 +85,13 @@ if (!function_exists('sp_mdl_setup')) :
             'flex-width' => true,
             'flex-height' => true,
         ));
+
+        /**
+         * Add support Editor Style to the TinyMCE editor within the post edit screen.
+         *
+         * @link https://codex.wordpress.org/Editor_Style
+         */
+        add_editor_style( get_template_directory_uri() . '/assets/css/editor' . sp_mdl_scripts_postfix() . '.css' );
     }
 endif;
 add_action('after_setup_theme', 'sp_mdl_setup');

@@ -21,6 +21,18 @@ Material Design Lite is a first hackable Material Design WordPress theme for the
 2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
+== Frequently Asked Questions ==
+
+= Support =
+You can ask question in the support section of this theme or
+on GitHub <https://github.com/sunny-pixels/sp-mdl/issues>
+
+= Child Theme =
+There are multiple ways you can use a child theme with the MDL Theme, Use any one method mentioned below to create a child theme or use a child theme we have created.
+
+1. Download the child theme from Github - https://github.com/sunny-pixels/sp-mdl-child-theme
+2. Using Plugin One click Child theme - https://wordpress.org/plugins/one-click-child-theme/
+3. More information on creating child theme. - https://codex.wordpress.org/Child_Themes
 
 == Changelog ==
 
