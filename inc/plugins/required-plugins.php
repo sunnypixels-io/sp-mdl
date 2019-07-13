@@ -81,16 +81,7 @@ function sp_mdl_register_required_plugins() {
             'tags'     => 'theme-core, customizer'
         ),
 
-
-        // TODO: add some extra features, metaboxes for posts and pages
-        //array(
-        //    'name'         => 'Material Design Lite - Extras',
-        //    'slug'         => 'material-design-lite-extra',
-        //    'required'     => true,
-        //    'source'       => 'https://github.com/reatlat/wp-material-design-lite-extra/archive/master.zip',
-        //    'external_url' => 'https://github.com/reatlat/wp-material-design-lite-extra/',
-        //    'tags'         => 'theme-core, author'
-        //),
+        //TODO: include free and paid plugins for extra features in this theme
 
         array(
             'name'     => 'Customizer Export/Import',

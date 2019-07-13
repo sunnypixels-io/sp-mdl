@@ -269,7 +269,8 @@ require get_template_directory() . '/inc/template-functions.php';
 /**
  * Theme information page.
  */
-require get_template_directory() . '/inc/theme-information.php';
+// TODO: make theme info page in next release
+//require get_template_directory() . '/inc/theme-information.php';
 
 /**
  * Customizer additions.
