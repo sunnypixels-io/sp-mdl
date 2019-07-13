@@ -1,10 +1,10 @@
-# <!=Copyright (C) 2019 Alex Zappa a.k.a. re[at]lat
+# <!=Copyright (C) 2019 SunnyPixels
 # This file is distributed under the GNU General Public License v3 or later.=!>
 msgid ""
 msgstr ""
 "Project-Id-Version: Material Design Lite 1.0.0\n"
 "Report-Msgid-Bugs-To: https://sunnypixels.io/\n"
-"POT-Creation-Date: 2019-06-29 17:52:01+00:00\n"
+"POT-Creation-Date: 2019-07-13 19:45:46+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -36,160 +36,200 @@ msgstr ""
 msgid "take me home"
 msgstr ""
 
-#: comments.php:48
+#: comments.php:52
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:49
+#: comments.php:53
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:59
+#: comments.php:63
 msgid "Comments are closed."
 msgstr ""
 
-#: comments.php:70
-msgid "Submit"
+#: comments.php:71
+msgid "(optional)"
 msgstr ""
 
 #: comments.php:72
-msgid "Leave a Comment"
+msgid "Join the discussion"
 msgstr ""
 
-#: comments.php:79 inc/customizer-kirki.php:329
-msgid "Comments"
+#: comments.php:72
+msgid "Start the discussion"
 msgstr ""
 
-#: comments.php:87
+#: comments.php:76
+msgid "Submit"
+msgstr ""
+
+#: comments.php:100
 msgid "Name"
 msgstr ""
 
-#: comments.php:93
+#: comments.php:104
 msgid "Email"
 msgstr ""
 
-#: comments.php:98
-msgid "Website"
+#: comments.php:105
+msgid "Note: Your email address will not be published."
 msgstr ""
 
-#: functions.php:55
+#: comments.php:110
+msgid "Website (optional)"
+msgstr ""
+
+#: comments.php:119
+msgid ""
+"Save my name, email, and website in this browser for the next time I "
+"comment."
+msgstr ""
+
+#: functions.php:51
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:56
+#: functions.php:52
 msgid "Drawer Menu"
 msgstr ""
 
-#: functions.php:57
+#: functions.php:53
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:157
+#: functions.php:151
 msgid "Footer 1"
 msgstr ""
 
-#: functions.php:167
+#: functions.php:161
 msgid "Footer 2"
 msgstr ""
 
-#: functions.php:177
+#: functions.php:171
 msgid "Footer 3"
 msgstr ""
 
-#: functions.php:187
+#: functions.php:181
 msgid "Footer 4"
 msgstr ""
 
-#: inc/customizer-kirki.php:33
-msgid "General options"
-msgstr ""
-
-#: inc/customizer-kirki.php:34
-msgid "Theme general options"
-msgstr ""
-
-#: inc/customizer-kirki.php:44
+#: inc/customizer-kirki.php:41
 msgid "Theme color"
 msgstr ""
 
-#: inc/customizer-kirki.php:46
+#: inc/customizer-kirki.php:43
 msgid ""
 "Select the primary and accent colors to be used for your site. %sMDL Color "
 "Wheel%s"
 msgstr ""
 
-#: inc/customizer-kirki.php:55
-msgid "Primary color"
-msgstr ""
-
-#: inc/customizer-kirki.php:68
-msgid "Accent color"
-msgstr ""
-
-#: inc/customizer-kirki.php:84
+#: inc/customizer-kirki.php:92
 msgid "Body Background"
 msgstr ""
 
-#: inc/customizer-kirki.php:92
-msgid "Background Control"
-msgstr ""
-
-#: inc/customizer-kirki.php:93
+#: inc/customizer-kirki.php:101
 msgid ""
 "Background controls are pretty complex - but extremely useful if properly "
 "used."
 msgstr ""
 
-#: inc/customizer-kirki.php:117
+#: inc/customizer-kirki.php:130
 msgid "Blog Entries"
 msgstr ""
 
-#: inc/customizer-kirki.php:135
-msgid "Header"
+#: inc/customizer-kirki.php:145 inc/customizer-kirki.php:330
+#: inc/customizer-kirki.php:394
+msgid "Layout"
 msgstr ""
 
-#: inc/customizer-kirki.php:143
+#: inc/customizer-kirki.php:151 inc/customizer-kirki.php:336
+#: inc/customizer-kirki.php:400
+msgid "Simple: Only Title"
+msgstr ""
+
+#: inc/customizer-kirki.php:152 inc/customizer-kirki.php:337
+#: inc/customizer-kirki.php:401
+msgid "Classic: Title + Featured image"
+msgstr ""
+
+#: inc/customizer-kirki.php:153 inc/customizer-kirki.php:338
+#: inc/customizer-kirki.php:402
+msgid "Modern: Title on the Featured image"
+msgstr ""
+
+#: inc/customizer-kirki.php:154 inc/customizer-kirki.php:339
+#: inc/customizer-kirki.php:403
+msgid "None: Show nothing / Disable"
+msgstr ""
+
+#: inc/customizer-kirki.php:161 inc/customizer-kirki.php:346
+#: inc/customizer-kirki.php:410
+msgid "Colorful Title"
+msgstr ""
+
+#: inc/customizer-kirki.php:176
 msgid "Random header bg-color"
 msgstr ""
 
-#: inc/customizer-kirki.php:152
+#: inc/customizer-kirki.php:185
 msgid "Default bg-color for header"
 msgstr ""
 
-#: inc/customizer-kirki.php:173
+#: inc/customizer-kirki.php:206
 msgid "Default Header Image"
 msgstr ""
 
-#: inc/customizer-kirki.php:204
+#: inc/customizer-kirki.php:233
 msgid "Short post excerpt"
 msgstr ""
 
-#: inc/customizer-kirki.php:213
+#: inc/customizer-kirki.php:242
 msgid "The excerpt will contain no more than the length of characters"
 msgstr ""
 
-#: inc/customizer-kirki.php:247
+#: inc/customizer-kirki.php:271
 msgid "Post footer"
 msgstr ""
 
-#: inc/customizer-kirki.php:256
+#: inc/customizer-kirki.php:280
 msgid "Gravatar icon"
 msgstr ""
 
-#: inc/customizer-kirki.php:272
+#: inc/customizer-kirki.php:296
 msgid "Published date"
 msgstr ""
 
-#: inc/customizer-kirki.php:291
-msgid "Single Post"
+#: inc/customizer-kirki.php:315
+msgid "Blog Single Post"
 msgstr ""
 
-#: inc/customizer-kirki.php:299 inc/customizer-kirki.php:316
-msgid "This is the label"
+#: inc/customizer-kirki.php:369
+msgid "Content header"
 msgstr ""
 
-#: inc/customizer-kirki.php:308
+#: inc/customizer-kirki.php:379
 msgid "Page"
+msgstr ""
+
+#: inc/customizer-kirki.php:428
+msgid "Comments"
+msgstr ""
+
+#: inc/customizer-kirki.php:443
+msgid "Enable comments on website"
+msgstr ""
+
+#: inc/customizer-kirki.php:444
+msgid "Enable or disable the comments, for the entire site."
+msgstr ""
+
+#: inc/customizer-kirki.php:453
+msgid "Enable comments on pages"
+msgstr ""
+
+#: inc/customizer-kirki.php:454
+msgid "Enable or disable the pages comments, for the entire site."
 msgstr ""
 
 #: inc/plugins/class-tgm-plugin-activation.php:327
@@ -542,29 +582,44 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: inc/template-functions.php:259
+#: inc/template-functions.php:279
 msgid "Read More"
 msgstr ""
 
-#: inc/template-functions.php:301
+#: inc/template-functions.php:322
 msgid "Edit %s"
 msgstr ""
 
-#: inc/template-tags.php:26
-msgid ""
-"<button class=\"mdl-button mdl-js-button mdl-js-ripple-effect "
-"mdl-button--icon\">\n"
-"            <i class=\"material-icons\">arrow_back</i>\n"
-"          </button> Newer"
+#: inc/template-functions.php:338
+msgid "Press %s+D to bookmark this page."
 msgstr ""
 
-#: inc/template-tags.php:33
-msgid ""
-"Older\n"
-"          <button class=\"mdl-button mdl-js-button mdl-js-ripple-effect "
-"mdl-button--icon\">\n"
-"            <i class=\"material-icons\">arrow_forward</i>\n"
-"          </button>"
+#: inc/template-functions.php:377
+msgid "Pingback:"
+msgstr ""
+
+#: inc/template-functions.php:378
+msgid "(Edit)"
+msgstr ""
+
+#: inc/template-functions.php:399
+msgid "%s "
+msgstr ""
+
+#: inc/template-functions.php:412
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/template-functions.php:424
+msgid "Reply"
+msgstr ""
+
+#: inc/template-tags.php:26 inc/template-tags.php:65
+msgid "%s Newer"
+msgstr ""
+
+#: inc/template-tags.php:37 inc/template-tags.php:69
+msgid "Older %s"
 msgstr ""
 
 #: inc/theme-information.php:17 inc/theme-information.php:18
@@ -634,12 +689,12 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:30 template-parts/content-single.php:53
-#: template-parts/content.php:42
+#: template-parts/content-page.php:23 template-parts/content-single.php:47
+#: template-parts/content.php:35
 msgid "Pages:"
 msgstr ""
 
-#: template-parts/content.php:32
+#: template-parts/content.php:25
 #. translators: %s: Name of current post.
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
@@ -649,7 +704,7 @@ msgid "Material Design Lite"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://sunnypixels.io/"
+msgid "https://sunnypixels.io/mdl"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -659,14 +714,14 @@ msgid ""
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Alex Zappa a.k.a. re[at]lat"
+msgid "SunnyPixels"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://sunnypixels.io/reatlat/"
+msgid "https://sunnypixels.io"
 msgstr ""
 
-#: comments.php:32
+#: comments.php:33
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
@@ -698,18 +753,18 @@ msgctxt "as in: \"version nr unknown\""
 msgid "unknown"
 msgstr ""
 
-#: inc/template-tags.php:97
+#: inc/template-tags.php:99
 #. translators: %s: post date.
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/template-tags.php:126
+#: inc/template-tags.php:128
 msgctxt "post date"
 msgid "%s"
 msgstr ""
 
-#: inc/template-tags.php:131
+#: inc/template-tags.php:133
 msgctxt "post author"
 msgid "%s"
 msgstr ""
