@@ -33,7 +33,6 @@ if (class_exists('Kirki')) :
         'option_type'   => 'theme_mod',
     ) );
 
-
     /**
      * Theme color
      * @since 1.0.0
@@ -143,7 +142,7 @@ if (class_exists('Kirki')) :
         Kirki::add_field( 'sp_mdl_theme', [
             'type'        => 'select',
             'settings'    => 'blog_entries_header_style',
-            'label'       => esc_html__( 'Header layout', 'material-design-lite' ),
+            'label'       => esc_html__( 'Layout', 'material-design-lite' ),
             'section'     => 'sp_mdl_theme__blog_entries',
             'default'     => 'modern',
             'priority'    => 105,
@@ -308,86 +307,116 @@ if (class_exists('Kirki')) :
         ] );
 
 
-        /**
-         * Blog single post
-         * @since 1.0.0
-         */
-        Kirki::add_section( 'sp_mdl_theme__blog_single', array(
-            'title'          => esc_html__( 'Blog Single Post', 'material-design-lite' ),
-            'priority'       => 194,
-        ) );
+    /**
+     * Blog single post
+     * @since 1.0.0
+     */
+    Kirki::add_section( 'sp_mdl_theme__blog_single', array(
+        'title'          => esc_html__( 'Blog Single Post', 'material-design-lite' ),
+        'priority'       => 194,
+    ) );
 
-            Kirki::add_field( 'sp_mdl_theme', [
-                'type'        => 'custom',
-                'settings'    => 'blog_single_header_title',
-                'section'     => 'sp_mdl_theme__blog_single',
-                'default'     => kirki_custom_title( 'Header'),
-                'priority'    => 100,
-            ] );
+        Kirki::add_field( 'sp_mdl_theme', [
+            'type'        => 'custom',
+            'settings'    => 'blog_single_header_title',
+            'section'     => 'sp_mdl_theme__blog_single',
+            'default'     => kirki_custom_title( 'Header'),
+            'priority'    => 100,
+        ] );
 
-            Kirki::add_field( 'sp_mdl_theme', [
-                'type'        => 'select',
-                'settings'    => 'blog_single_header_style',
-                'label'       => esc_html__( 'Header layout', 'material-design-lite' ),
-                'section'     => 'sp_mdl_theme__blog_single',
-                'default'     => 'modern',
-                'priority'    => 105,
-                'multiple'    => 1,
-                'choices'     => [
-                    'simple'  => esc_html__( 'Simple: Only Title', 'material-design-lite' ),
-                    'classic' => esc_html__( 'Classic: Title + Featured image', 'material-design-lite' ),
-                    'modern'  => esc_html__( 'Modern: Title on the Featured image', 'material-design-lite' ),
-                    'none'    => esc_html__( 'None: Show nothing / Disable', 'material-design-lite' ),
-                ],
-            ] );
+        Kirki::add_field( 'sp_mdl_theme', [
+            'type'        => 'select',
+            'settings'    => 'blog_single_header_style',
+            'label'       => esc_html__( 'Layout', 'material-design-lite' ),
+            'section'     => 'sp_mdl_theme__blog_single',
+            'default'     => 'modern',
+            'priority'    => 105,
+            'multiple'    => 1,
+            'choices'     => [
+                'simple'  => esc_html__( 'Simple: Only Title', 'material-design-lite' ),
+                'classic' => esc_html__( 'Classic: Title + Featured image', 'material-design-lite' ),
+                'modern'  => esc_html__( 'Modern: Title on the Featured image', 'material-design-lite' ),
+                'none'    => esc_html__( 'None: Show nothing / Disable', 'material-design-lite' ),
+            ],
+        ] );
 
-            Kirki::add_field( 'sp_mdl_theme', [
-                'type'        => 'toggle',
-                'settings'    => 'blog_single_header_colorful_title',
-                'label'       => esc_html__( 'Colorful Title', 'material-design-lite' ),
-                'section'     => 'sp_mdl_theme__blog_single',
-                'default'     => '0',
-                'priority'    => 110,
-                'active_callback' => function() {
-                    if ( in_array(get_theme_mod( 'blog_single_header_style', 'none' ), ['classic', 'simple'] ) ) {
-                        return true;
-                    }
-                    return false;
-                },
-            ] );
+        Kirki::add_field( 'sp_mdl_theme', [
+            'type'        => 'toggle',
+            'settings'    => 'blog_single_header_colorful_title',
+            'label'       => esc_html__( 'Colorful Title', 'material-design-lite' ),
+            'section'     => 'sp_mdl_theme__blog_single',
+            'default'     => '0',
+            'priority'    => 110,
+            'active_callback' => function() {
+                if ( in_array(get_theme_mod( 'blog_single_header_style', 'none' ), ['classic', 'simple'] ) ) {
+                    return true;
+                }
+                return false;
+            },
+        ] );
 
-            Kirki::add_field( 'sp_mdl_theme', [
-                'type'        => 'custom',
-                'settings'    => 'blog_single_content_title',
-                'section'     => 'sp_mdl_theme__blog_single',
-                'default'     => kirki_custom_title( 'Content'),
-                'priority'    => 115,
-            ] );
+        Kirki::add_field( 'sp_mdl_theme', [
+            'type'        => 'custom',
+            'settings'    => 'blog_single_content_title',
+            'section'     => 'sp_mdl_theme__blog_single',
+            'default'     => kirki_custom_title( 'Content'),
+            'priority'    => 115,
+        ] );
 
-            Kirki::add_field( 'sp_mdl_theme', [
-                'type'        => 'toggle',
-                'settings'    => 'blog_single_content_header_show',
-                'label'       => esc_html__( 'Content header', 'material-design-lite' ),
-                'section'     => 'sp_mdl_theme__blog_single',
-                'default'     => '1',
-                'priority'    => 120,
-            ] );
+        Kirki::add_field( 'sp_mdl_theme', [
+            'type'        => 'toggle',
+            'settings'    => 'blog_single_content_header_show',
+            'label'       => esc_html__( 'Content header', 'material-design-lite' ),
+            'section'     => 'sp_mdl_theme__blog_single',
+            'default'     => '1',
+            'priority'    => 120,
+        ] );
 
 
 
     // Page
-        Kirki::add_section( 'sp_mdl_theme__page', array(
-            'title'          => esc_html__( 'Page', 'material-design-lite' ),
-            'priority'       => 194,
-        ) );
+    Kirki::add_section( 'sp_mdl_theme__page', array(
+        'title'          => esc_html__( 'Page', 'material-design-lite' ),
+        'priority'       => 194,
+    ) );
+
+        Kirki::add_field( 'sp_mdl_theme', [
+            'type'        => 'custom',
+            'settings'    => 'blog_page_header_title',
+            'section'     => 'sp_mdl_theme__page',
+            'default'     => kirki_custom_title( 'Header'),
+            'priority'    => 100,
+        ] );
+
+        Kirki::add_field( 'sp_mdl_theme', [
+            'type'        => 'select',
+            'settings'    => 'blog_page_header_style',
+            'label'       => esc_html__( 'Layout', 'material-design-lite' ),
+            'section'     => 'sp_mdl_theme__page',
+            'default'     => 'modern',
+            'priority'    => 105,
+            'multiple'    => 1,
+            'choices'     => [
+                'simple'  => esc_html__( 'Simple: Only Title', 'material-design-lite' ),
+                'classic' => esc_html__( 'Classic: Title + Featured image', 'material-design-lite' ),
+                'modern'  => esc_html__( 'Modern: Title on the Featured image', 'material-design-lite' ),
+                'none'    => esc_html__( 'None: Show nothing / Disable', 'material-design-lite' ),
+            ],
+        ] );
 
         Kirki::add_field( 'sp_mdl_theme', [
             'type'        => 'toggle',
-            'settings'    => 'my_setting_3',
-            'label'       => esc_html__( 'This is the label', 'material-design-lite' ),
+            'settings'    => 'blog_page_header_colorful_title',
+            'label'       => esc_html__( 'Colorful Title', 'material-design-lite' ),
             'section'     => 'sp_mdl_theme__page',
-            'default'     => '1',
-            'priority'    => 100,
+            'default'     => '0',
+            'priority'    => 110,
+            'active_callback' => function() {
+                if ( in_array(get_theme_mod( 'blog_page_header_style', 'none' ), ['classic', 'simple'] ) ) {
+                    return true;
+                }
+                return false;
+            },
         ] );
 
 

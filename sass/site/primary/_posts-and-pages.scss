@@ -28,17 +28,15 @@
     align-items: flex-end;
     cursor: pointer;
     height: 280px;
-
-    .post-edit-link {
-      position: absolute;
-      top: 24px;
-      left: 24px;
-      color: $mdl-color--white;
-      border: 1px solid $mdl-color--white;
-    }
   }
 
   .sp-mdl-header {
+
+    .post-edit-link {
+      position: absolute;
+      right: 24px;
+    }
+
     &--none {
       display: none
     }
@@ -51,11 +49,22 @@
       }
     }
     &--modern {
-
+      .post-edit-link {
+        top: 24px;
+        left: 24px;
+        right: initial;
+        color: $mdl-color--white;
+        border: 1px solid $mdl-color--white;
+      }
     }
     &--colorful {
       border-bottom: none;
-      header h2 {
+
+      .post-edit-link {
+        color: $mdl-color--white;
+        border: 1px solid $mdl-color--white;
+      }
+        header h2 {
         color: $mdl-color--white;
         a {
           color: $mdl-color--white;

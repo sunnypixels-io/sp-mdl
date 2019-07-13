@@ -6,11 +6,13 @@
  *
  * @package Material_Design_Lite
  */
-
+//TODO: make customizer settings for drawer-menu
 ?>
 
 <div id="menu-drawer" class="mdl-layout__drawer">
-    <span class="mdl-layout-title"><?php bloginfo('name'); ?></span>
+    <div class="mdl-layout-title">
+        <?php bloginfo('name'); ?>
+    </div>
     <?php
     $args = array(
         'theme_location' => 'drawer',

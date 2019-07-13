@@ -1018,12 +1018,9 @@ textarea {
   cursor: pointer;
   height: 280px;
 }
-.site-main .mdl-card__media .post-edit-link {
+.site-main .sp-mdl-header .post-edit-link {
   position: absolute;
-  top: 24px;
-  left: 24px;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
+  right: 24px;
 }
 .site-main .sp-mdl-header--none {
   display: none;
@@ -1034,8 +1031,19 @@ textarea {
 .site-main .sp-mdl-header--classic .mdl-card__media {
   height: 240px;
 }
+.site-main .sp-mdl-header--modern .post-edit-link {
+  top: 24px;
+  left: 24px;
+  right: initial;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+}
 .site-main .sp-mdl-header--colorful {
   border-bottom: none;
+}
+.site-main .sp-mdl-header--colorful .post-edit-link {
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
 }
 .site-main .sp-mdl-header--colorful header h2 {
   color: #FFFFFF;

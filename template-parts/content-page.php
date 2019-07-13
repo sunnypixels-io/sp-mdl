@@ -12,7 +12,7 @@
 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-        <?php get_template_part( 'template-parts/header/page', get_theme_mod('blog_pages_header_style', 'modern') ); ?>
+        <?php get_template_part( 'template-parts/header/page', get_theme_mod('blog_page_header_style', 'modern') ); ?>
 
         <div class="entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
             <?php the_content(); ?>

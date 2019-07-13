@@ -300,10 +300,3 @@ require get_template_directory() . '/inc/widgets/register-widgets.php';
 if (class_exists('WooCommerce')) {
     require get_template_directory() . '/inc/woocommerce.php';
 }
-
-function xxx($x){
-    $x .= '/* SETUP DONE */';
-    return $x;
-}
-
-add_filter('sp_mdl_theme_custom_css', 'xxx');
