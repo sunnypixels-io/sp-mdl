@@ -1,7 +1,7 @@
 === Material Design Lite ===
 
 Contributors: reatlat
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, mdl, material-design-lite
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, mdl, material-design-lite, reatlat, sunnypixels
 
 Requires at least: 4.5
 Tested up to: 5.2.2
@@ -21,18 +21,14 @@ Material Design Lite is a first hackable Material Design WordPress theme for the
 2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
-== Frequently Asked Questions ==
-
-= Does this theme support any plugins? =
-
-Material Design Lite includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 1.0.0 - Jule 13 2019 =
 * Initial release
 
 == Credits ==
 
+* Based om Material Design Lite framework https://getmdl.io/, (C) 2015 Google Inc., Licensed under an Apache-2 license.
 * Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
