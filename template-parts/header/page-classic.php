@@ -6,7 +6,7 @@
  *
  * @package Material_Design_Lite
  */
-
+global $post;
 $header_style = has_post_thumbnail() ? 'classic' : 'simple';
 if (get_theme_mod('blog_page_header_colorful_title', false))
     $header_style .= ' sp-mdl-header--colorful ' . sp_mdl_get_header_bg_color('mdl-color--');
@@ -18,6 +18,8 @@ if (get_theme_mod('blog_page_header_colorful_title', false))
         <header>
             <?php the_title(sprintf('<h2 class="mdl-card__title-text">', '</h2>')); ?>
         </header>
+
+        <?php sp_mdl_edit_post_link($post->ID); ?>
     </div>
 
     <?php if (has_post_thumbnail()) : ?>
