@@ -333,7 +333,10 @@ if (!function_exists('sp_mdl_localize_script')) :
             case 'public':
                 $array = array(
                     'debug' => SP_MDL_DEBUG,
-                    'theme' => wp_get_theme()->name
+                    'theme' => wp_get_theme()->name,
+                    'i18n' => array(
+                        'bookmark-alert' => __('Press %s+D to bookmark this page.', 'material-design-lite')
+                    )
                 );
                 break;
 

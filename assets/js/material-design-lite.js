@@ -8,11 +8,11 @@ class MDL {
     constructor({
                     debug = false,
                     isEU = false,
-                    cookieNotice = false,
+                    i18n = false,
                 }) {
         this.debug = debug;
         this.isEU = isEU;
-        this.cookieNotice = cookieNotice;
+        this.i18n = i18n;
     }
 
 
@@ -66,12 +66,13 @@ class MDL {
                 // IE Favorites
                 window.external.AddFavorite(bookmarkURL, bookmarkTitle);
             } else {
-                // TODO: make translatable this text
                 let soMany = 10;
-                console.log(`This is ${soMany} times easier!`);
+                window.MDL._debugLog(`This is ${soMany} times easier!`);
                 // Other browsers (mainly WebKit & Blink - Safari, Chrome, Opera 15+)
                 setTimeout(function () {
-                    alert('Press ' + (/Mac/i.test(navigator.platform) ? 'Cmd' : 'Ctrl') + '+D to bookmark this page.');
+                    let key = /Mac/i.test(navigator.platform) ? 'Cmd' : 'Ctrl';
+                    let message = window.MDL.i18n['bookmark-alert'].replace('%s', key);
+                    alert(message);
                 }, 500);
             }
 
