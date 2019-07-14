@@ -37,17 +37,32 @@
       right: 24px;
     }
 
+    h2,
+    h3 {
+      a {
+        color: inherit;
+        font-weight: inherit;
+        transition: opacity .25s ease;
+        &:hover {
+          opacity: .7;
+        }
+      }
+    }
+
     &--none {
       display: none
     }
+
     &--simple {
       border-bottom: 1px solid rgba($mdl-color--black, .12);
     }
+
     &--classic {
       .mdl-card__media {
         height: 240px;
       }
     }
+
     &--modern {
       .post-edit-link {
         top: 24px;
@@ -57,6 +72,7 @@
         border: 1px solid $mdl-color--white;
       }
     }
+
     &--colorful {
       border-bottom: none;
 
@@ -64,8 +80,11 @@
         color: $mdl-color--white;
         border: 1px solid $mdl-color--white;
       }
-        header h2 {
+
+      header h2,
+      header h3 {
         color: $mdl-color--white;
+
         a {
           color: $mdl-color--white;
           text-decoration: none;

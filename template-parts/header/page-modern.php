@@ -16,7 +16,7 @@ global $post;
         <?php sp_mdl_edit_post_link($post->ID); ?>
 
         <header>
-            <?php the_title(sprintf('<h3> ', '</h3>')); ?>
+            <?php the_title('<h3>', '</h3>'); ?>
         </header>
 
     </div>

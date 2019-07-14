@@ -16,7 +16,7 @@ if (get_theme_mod('blog_page_header_colorful_title', false))
 
     <div class="mdl-card__title">
         <header>
-            <?php the_title(sprintf('<h2 class="mdl-card__title-text">', '</h2>')); ?>
+            <?php the_title('<h2 class="mdl-card__title-text">', '</h2>'); ?>
         </header>
 
         <?php sp_mdl_edit_post_link($post->ID); ?>

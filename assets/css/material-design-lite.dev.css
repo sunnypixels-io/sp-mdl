@@ -1022,6 +1022,16 @@ textarea {
   position: absolute;
   right: 24px;
 }
+.site-main .sp-mdl-header h2 a,
+.site-main .sp-mdl-header h3 a {
+  color: inherit;
+  font-weight: inherit;
+  transition: opacity .25s ease;
+}
+.site-main .sp-mdl-header h2 a:hover,
+.site-main .sp-mdl-header h3 a:hover {
+  opacity: .7;
+}
 .site-main .sp-mdl-header--none {
   display: none;
 }
@@ -1045,10 +1055,12 @@ textarea {
   color: #FFFFFF;
   border: 1px solid #FFFFFF;
 }
-.site-main .sp-mdl-header--colorful header h2 {
+.site-main .sp-mdl-header--colorful header h2,
+.site-main .sp-mdl-header--colorful header h3 {
   color: #FFFFFF;
 }
-.site-main .sp-mdl-header--colorful header h2 a {
+.site-main .sp-mdl-header--colorful header h2 a,
+.site-main .sp-mdl-header--colorful header h3 a {
   color: #FFFFFF;
   text-decoration: none;
 }
