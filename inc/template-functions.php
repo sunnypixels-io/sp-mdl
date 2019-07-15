@@ -331,20 +331,20 @@ if (!function_exists('sp_mdl_localize_script')) :
     {
         switch ($case) {
             case 'public':
-                $array = array(
+                $array = apply_filters('sp_localize_public_array', array(
                     'debug' => SP_MDL_DEBUG,
                     'theme' => wp_get_theme()->name,
                     'i18n' => array(
                         'bookmark-alert' => __('Press %s+D to bookmark this page.', 'material-design-lite')
                     )
-                );
+                ) );
                 break;
 
             case 'admin':
-                $array = array(
+                $array = apply_filters('sp_localize_admin_array', array(
                     'debug' => SP_MDL_DEBUG,
                     'autocompiteSource' => sp_mdl_get_source_for_autocomplete()
-                );
+                ) );
                 break;
 
             default:
@@ -352,7 +352,7 @@ if (!function_exists('sp_mdl_localize_script')) :
                 break;
         }
 
-        return apply_filters('sp_localize_array', $array);
+        return $array;
     }
 endif;
 
