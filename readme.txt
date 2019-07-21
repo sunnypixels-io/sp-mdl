@@ -5,7 +5,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 
 Requires at least: 4.5
 Tested up to: 5.2.2
-Stable tag: 1.0.0
+Stable tag: 1.0.2
 License: GNU General Public License v3 or later
 License URI: LICENSE
 
@@ -35,6 +35,12 @@ There are multiple ways you can use a child theme with the MDL Theme, Use any on
 3. More information on creating child theme. - https://codex.wordpress.org/Child_Themes
 
 == Changelog ==
+
+= 1.0.2 - Jule 21 2019 =
+include accessibility skip link
+
+= 1.0.1 - Jule 15 2019 =
+* update title, now they work as a links
 
 = 1.0.0 - Jule 13 2019 =
 * Initial release

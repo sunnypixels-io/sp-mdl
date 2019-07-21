@@ -41,6 +41,7 @@
 
     <?php get_template_part('template-parts/nav', 'drawer'); ?>
 
+        <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'material-design-lite' ); ?></a>
 
         <main class="mdl-layout__content">
             <div id="content" class="site-content">
