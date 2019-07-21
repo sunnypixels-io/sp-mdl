@@ -18,4 +18,4 @@ assets/js/*.dev.js
 assets/js/*.js.map
 
 # Theme archives
-material-design-lite.v*.*.*.zip
+*.v*.*.*.zip
