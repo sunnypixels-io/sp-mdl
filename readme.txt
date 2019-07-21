@@ -37,7 +37,7 @@ There are multiple ways you can use a child theme with the MDL Theme, Use any on
 == Changelog ==
 
 = 1.0.2 - Jule 21 2019 =
-include accessibility skip link
+* include accessibility skip link
 
 = 1.0.1 - Jule 15 2019 =
 * update title, now they work as a links
