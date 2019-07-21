@@ -4,7 +4,7 @@
  *
  * @link https://woocommerce.com/
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 
 /**
@@ -224,11 +224,11 @@ if ( ! function_exists( 'sp_mdl_woocommerce_cart_link' ) ) {
 	 */
 	function sp_mdl_woocommerce_cart_link() {
 		?>
-		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'material-design-lite' ); ?>">
+		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'sp-mdl' ); ?>">
 			<?php
 			$item_count_text = sprintf(
 				/* translators: number of items in the mini cart. */
-				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'material-design-lite' ),
+				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'sp-mdl' ),
 				WC()->cart->get_cart_contents_count()
 			);
 			?>

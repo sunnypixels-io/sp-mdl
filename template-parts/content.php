@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 
 ?>
@@ -22,7 +22,7 @@
             else :
                 the_content(sprintf(
                 /* translators: %s: Name of current post. */
-                    wp_kses(__('Continue reading %s <span class="meta-nav">&rarr;</span>', 'material-design-lite'), array('span' => array('class' => array()))),
+                    wp_kses(__('Continue reading %s <span class="meta-nav">&rarr;</span>', 'sp-mdl'), array('span' => array('class' => array()))),
                     the_title('<span class="screen-reader-text">"', '"</span>', false)
                 ));
             endif;
@@ -32,7 +32,7 @@
         <?php
         if (!get_theme_mod('blog_entries_content_excerpt', false)) :
             wp_link_pages(array(
-                'before' => '<div class="mdl-page-links mdl-card__actions mdl-card--border"><span class="mdl-button mdl-js-button entry-page-links__title" disabled>' . esc_html__('Pages:', 'material-design-lite') . '</span>',
+                'before' => '<div class="mdl-page-links mdl-card__actions mdl-card--border"><span class="mdl-button mdl-js-button entry-page-links__title" disabled>' . esc_html__('Pages:', 'sp-mdl') . '</span>',
                 'after' => '</div>',
                 'link_before'      => '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">',
                 'link_after'       => '</button>',

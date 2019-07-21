@@ -139,7 +139,7 @@ function sp_mdl_register_required_plugins() {
 	 * Only uncomment the strings in the config array if you want to customize the strings.
 	 */
 	$config = array(
-		'id'           => 'material-design-lite',                 // Unique ID for hashing notices for multiple instances of TGMPA.
+		'id'           => 'sp-mdl',                 // Unique ID for hashing notices for multiple instances of TGMPA.
 		'default_path' => '',                      // Default absolute path to bundled plugins.
 		'menu'         => 'tgmpa-install-plugins', // Menu slug.
 		'has_notices'  => true,                    // Show admin notices or not.
@@ -150,76 +150,76 @@ function sp_mdl_register_required_plugins() {
 
 		/*
 		'strings'      => array(
-			'page_title'                      => __( 'Install Required Plugins', 'material-design-lite' ),
-			'menu_title'                      => __( 'Install Plugins', 'material-design-lite' ),
+			'page_title'                      => __( 'Install Required Plugins', 'sp-mdl' ),
+			'menu_title'                      => __( 'Install Plugins', 'sp-mdl' ),
 			/* translators: %s: plugin name. * /
-			'installing'                      => __( 'Installing Plugin: %s', 'material-design-lite' ),
+			'installing'                      => __( 'Installing Plugin: %s', 'sp-mdl' ),
 			/* translators: %s: plugin name. * /
-			'updating'                        => __( 'Updating Plugin: %s', 'material-design-lite' ),
-			'oops'                            => __( 'Something went wrong with the plugin API.', 'material-design-lite' ),
+			'updating'                        => __( 'Updating Plugin: %s', 'sp-mdl' ),
+			'oops'                            => __( 'Something went wrong with the plugin API.', 'sp-mdl' ),
 			'notice_can_install_required'     => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'This theme requires the following plugin: %1$s.',
 				'This theme requires the following plugins: %1$s.',
-				'material-design-lite'
+				'sp-mdl'
 			),
 			'notice_can_install_recommended'  => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'This theme recommends the following plugin: %1$s.',
 				'This theme recommends the following plugins: %1$s.',
-				'material-design-lite'
+				'sp-mdl'
 			),
 			'notice_ask_to_update'            => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
 				'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
-				'material-design-lite'
+				'sp-mdl'
 			),
 			'notice_ask_to_update_maybe'      => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'There is an update available for: %1$s.',
 				'There are updates available for the following plugins: %1$s.',
-				'material-design-lite'
+				'sp-mdl'
 			),
 			'notice_can_activate_required'    => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'The following required plugin is currently inactive: %1$s.',
 				'The following required plugins are currently inactive: %1$s.',
-				'material-design-lite'
+				'sp-mdl'
 			),
 			'notice_can_activate_recommended' => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'The following recommended plugin is currently inactive: %1$s.',
 				'The following recommended plugins are currently inactive: %1$s.',
-				'material-design-lite'
+				'sp-mdl'
 			),
 			'install_link'                    => _n_noop(
 				'Begin installing plugin',
 				'Begin installing plugins',
-				'material-design-lite'
+				'sp-mdl'
 			),
 			'update_link' 					  => _n_noop(
 				'Begin updating plugin',
 				'Begin updating plugins',
-				'material-design-lite'
+				'sp-mdl'
 			),
 			'activate_link'                   => _n_noop(
 				'Begin activating plugin',
 				'Begin activating plugins',
-				'material-design-lite'
+				'sp-mdl'
 			),
-			'return'                          => __( 'Return to Required Plugins Installer', 'material-design-lite' ),
-			'plugin_activated'                => __( 'Plugin activated successfully.', 'material-design-lite' ),
-			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'material-design-lite' ),
+			'return'                          => __( 'Return to Required Plugins Installer', 'sp-mdl' ),
+			'plugin_activated'                => __( 'Plugin activated successfully.', 'sp-mdl' ),
+			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'sp-mdl' ),
 			/* translators: 1: plugin name. * /
-			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'material-design-lite' ),
+			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'sp-mdl' ),
 			/* translators: 1: plugin name. * /
-			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'material-design-lite' ),
+			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'sp-mdl' ),
 			/* translators: 1: dashboard link. * /
-			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'material-design-lite' ),
-			'dismiss'                         => __( 'Dismiss this notice', 'material-design-lite' ),
-			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'material-design-lite' ),
-			'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'material-design-lite' ),
+			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'sp-mdl' ),
+			'dismiss'                         => __( 'Dismiss this notice', 'sp-mdl' ),
+			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'sp-mdl' ),
+			'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'sp-mdl' ),
 
 			'nag_type'                        => '', // Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
 		),

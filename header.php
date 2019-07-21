@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 
 ?>
@@ -41,7 +41,7 @@
 
     <?php get_template_part('template-parts/nav', 'drawer'); ?>
 
-        <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'material-design-lite' ); ?></a>
+        <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sp-mdl' ); ?></a>
 
         <main class="mdl-layout__content">
             <div id="content" class="site-content">

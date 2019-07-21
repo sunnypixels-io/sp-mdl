@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Class_Reference/Walker
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 if (!class_exists('SP_MDL_Nav_Walker')) :
     class SP_MDL_Nav_Walker extends Walker_Nav_Menu

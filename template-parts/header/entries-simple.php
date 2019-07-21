@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 $header_style = get_theme_mod('blog_entries_header_colorful_title', false) ? ' sp-mdl-header--colorful ' . sp_mdl_get_header_bg_color('mdl-color--') : '';
 ?>

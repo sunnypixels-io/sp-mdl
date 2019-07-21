@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 
 if (!function_exists('sp_mdl_posts_navigation')) :
@@ -23,7 +23,7 @@ if (!function_exists('sp_mdl_posts_navigation')) :
             <?php
             if (get_previous_posts_link()) :
                 previous_posts_link(sprintf(
-                    __('%s Newer', 'material-design-lite'),
+                    __('%s Newer', 'sp-mdl'),
                     '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">arrow_back</i></button>'
                 ));
             endif;
@@ -34,7 +34,7 @@ if (!function_exists('sp_mdl_posts_navigation')) :
             <?php
             if (get_next_posts_link()) :
                 next_posts_link(sprintf(
-                    __('Older %s', 'material-design-lite'),
+                    __('Older %s', 'sp-mdl'),
                     '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">arrow_forward</i></button>'
                 ));
             endif;
@@ -62,11 +62,11 @@ if (!function_exists('sp_mdl_post_navigation')) :
         <nav class="mdl-post-navigation mdl-color-text--grey-50 mdl-cell mdl-cell--12-col" role="navigation">
             <?php
             next_post_link('%link', sprintf(
-                __('%s Newer', 'material-design-lite'),
+                __('%s Newer', 'sp-mdl'),
                 '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">arrow_back</i></button>'
             ));
             previous_post_link('%link', sprintf(
-                __('Older %s', 'material-design-lite'),
+                __('Older %s', 'sp-mdl'),
                 '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">arrow_forward</i></button>'
             ));
             ?>
@@ -96,7 +96,7 @@ if (!function_exists('sp_mdl_posted_on')) :
 
         $posted_on = sprintf(
         /* translators: %s: post date. */
-            esc_html_x('Posted on %s', 'post date', 'material-design-lite'),
+            esc_html_x('Posted on %s', 'post date', 'sp-mdl'),
             '<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $time_string . '</a>'
         );
 
@@ -125,12 +125,12 @@ if (!function_exists('sp_mdl_posted_by')) :
         );
 
         $posted_on = sprintf(
-            esc_html_x('%s', 'post date', 'material-design-lite'),
+            esc_html_x('%s', 'post date', 'sp-mdl'),
             '<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $time_string . '</a>'
         );
 
         $byline = sprintf(
-            esc_html_x('%s', 'post author', 'material-design-lite'),
+            esc_html_x('%s', 'post author', 'sp-mdl'),
             '<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
         );
 
@@ -139,7 +139,7 @@ if (!function_exists('sp_mdl_posted_by')) :
         // DEFAULT
         //$byline = sprintf(
         ///* translators: %s: post author. */
-        //esc_html_x( 'by %s', 'post author', 'material-design-lite' ),
+        //esc_html_x( 'by %s', 'post author', 'sp-mdl' ),
         //	'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
         //);
         //echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.

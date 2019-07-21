@@ -2,7 +2,7 @@
 /**
  * Theme information page
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 
 if (!function_exists('sp_mdl_theme_information_add_page')) :
@@ -14,8 +14,8 @@ if (!function_exists('sp_mdl_theme_information_add_page')) :
     function sp_mdl_theme_information_add_page()
     {
         $theme_page = add_theme_page(
-            __('Theme Information', 'material-design-lite'),   // Name of page
-            __('Theme Information', 'material-design-lite'),   // Label in menu
+            __('Theme Information', 'sp-mdl'),   // Name of page
+            __('Theme Information', 'sp-mdl'),   // Label in menu
             'edit_theme_options',          // Capability required
             'sp_mdl_theme_information',               // Menu slug, used to uniquely identify the page
             'sp_mdl_theme_information_render_page' // Function that renders the options page
@@ -41,7 +41,7 @@ if (!function_exists('sp_mdl_theme_information_render_page')) :
 
         ?>
         <div class="wrap mdl-theme-info">
-            <h1 class="wp-heading-inline"><?php _e('Material Design Lite - Theme Information', 'material-design-lite'); ?></h1>
+            <h1 class="wp-heading-inline"><?php _e('Material Design Lite - Theme Information', 'sp-mdl'); ?></h1>
             <hr>
 
             <?php

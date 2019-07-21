@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Styling_Theme_Forms
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 ?>
 <?php do_action( 'sp_mdl_before_searchform' ); ?>

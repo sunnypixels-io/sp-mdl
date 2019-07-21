@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 //TODO: make customizer settings for drawer-menu
 ?>

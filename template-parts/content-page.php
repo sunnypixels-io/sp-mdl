@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 
 ?>
@@ -20,7 +20,7 @@
 
         <?php
         wp_link_pages(array(
-            'before' => '<div class="mdl-page-links mdl-card__actions mdl-card--border"><span class="mdl-button mdl-js-button entry-page-links__title" disabled>' . esc_html__('Pages:', 'material-design-lite') . '</span>',
+            'before' => '<div class="mdl-page-links mdl-card__actions mdl-card--border"><span class="mdl-button mdl-js-button entry-page-links__title" disabled>' . esc_html__('Pages:', 'sp-mdl') . '</span>',
             'after' => '</div>',
             'link_before'      => '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">',
             'link_after'       => '</button>',

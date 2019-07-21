@@ -2,7 +2,7 @@
 /**
  * Material Design Lite Theme Customizer
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 
 

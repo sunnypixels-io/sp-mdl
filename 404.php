@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 
 get_header();
@@ -17,11 +17,11 @@ get_header();
 
                 <section class="error-404 not-found">
                     <header class="page-header">
-                        <h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'material-design-lite' ); ?></h1>
+                        <h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'sp-mdl' ); ?></h1>
                     </header><!-- .page-header -->
 
                     <div class="page-content">
-                        <p><?php _e( 'It looks like nothing was found at this location.', 'material-design-lite' ); ?></p>
+                        <p><?php _e( 'It looks like nothing was found at this location.', 'sp-mdl' ); ?></p>
 
                         <br>
                         <br>
@@ -29,7 +29,7 @@ get_header();
                         <p>
                             <a href="<?php home_url(); ?>" class="mdl-button mdl-js-button mdl-button--raised ">
                                 <i class="material-icons">home</i>
-                                <?php _e('take me home', 'material-design-lite'); ?>
+                                <?php _e('take me home', 'sp-mdl'); ?>
                             </a>
                         </p>
 

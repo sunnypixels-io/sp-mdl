@@ -2,7 +2,7 @@
 /**
  * MDL Widget: Footer Menu
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 
 if (!class_exists('MaterialDesignLite_Widget_FooterMenu') && class_exists('WP_Widget')) :
@@ -15,10 +15,10 @@ if (!class_exists('MaterialDesignLite_Widget_FooterMenu') && class_exists('WP_Wi
             // Base ID of your widget
                 'MaterialDesignLite_Widget_FooterMenu',
                 // Widget name will appear in UI
-                __('MDL Footer Dropdown menu', 'material-design-lite'),
+                __('MDL Footer Dropdown menu', 'sp-mdl'),
                 // Widget description
                 array(
-                    'description' => __('Footer Dropdown links', 'material-design-lite'),
+                    'description' => __('Footer Dropdown links', 'sp-mdl'),
 
                 )
             );
@@ -67,13 +67,13 @@ if (!class_exists('MaterialDesignLite_Widget_FooterMenu') && class_exists('WP_Wi
         public function form($instance)
         {
             $instance = wp_parse_args((array)$instance, array(
-                'title' => __('Menu', 'material-design-lite')
+                'title' => __('Menu', 'sp-mdl')
             ));
 
             ?>
             <p>
                 <label for="<?php echo $this->get_field_id('title'); ?>">
-                    <?php _e('Title:', 'material-design-lite'); ?></label>
+                    <?php _e('Title:', 'sp-mdl'); ?></label>
                 <input class="widefat"
                        id="<?php echo $this->get_field_id('title'); ?>"
                        name="<?php echo $this->get_field_name('title'); ?>"
@@ -95,7 +95,7 @@ if (!class_exists('MaterialDesignLite_Widget_FooterMenu') && class_exists('WP_Wi
                 <div class="js-mdl--footer-menu--field <?php echo $class; ?>">
                     <p>
                         <label for="<?php echo $this->get_field_id('link_' . $i); ?>">
-                            <?php _e('Link + Title', 'material-design-lite'); ?> [<?php echo $i + 1; ?>]</label>
+                            <?php _e('Link + Title', 'sp-mdl'); ?> [<?php echo $i + 1; ?>]</label>
                         <input class="js-mdl--autocomplete-footer-menu-link widefat"
                                id="<?php echo $this->get_field_id('link_' . $i); ?>"
                                name="<?php echo $this->get_field_name('link_' . $i); ?>"
@@ -115,7 +115,7 @@ if (!class_exists('MaterialDesignLite_Widget_FooterMenu') && class_exists('WP_Wi
 
             ?>
             <p class="js-mdl--footer-menu--add-fields">
-                <span class="dashicons dashicons-plus"></span> <?php _e('Add fields', 'material-design-lite'); ?>
+                <span class="dashicons dashicons-plus"></span> <?php _e('Add fields', 'sp-mdl'); ?>
             </p>
             <?php
         }

@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 
 /**
@@ -29,7 +29,7 @@ function sp_mdl_theme_branding($sanitize = false)
 function sp_mdl_theme_version()
 {
     // Dynamically get version number of the theme stylesheet
-    $theme = wp_get_theme('material-design-lite');
+    $theme = wp_get_theme('sp-mdl');
     $version = $theme->get('Version');
 
     return $version;
@@ -276,7 +276,7 @@ function sp_mdl_modify_read_more_link()
 
     <br><br>
     <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect"
-       href="<?php echo get_permalink(); ?>"><?php _e('Read More', 'material-design-lite'); ?></a>
+       href="<?php echo get_permalink(); ?>"><?php _e('Read More', 'sp-mdl'); ?></a>
 
     <?php
     $read_more_link = ob_get_contents();
@@ -319,7 +319,7 @@ if (!function_exists('sp_mdl_edit_post_link')) :
 
         $edit_button = '<i id="sp-tt-' . $post_id . '" class="material-icons">create</i>' .
             '<span class="mdl-tooltip mdl-tooltip--right" data-mdl-for="sp-tt-' . $post_id . '">' .
-            sprintf(__('Edit %s', 'material-design-lite'), get_post_type($post_id)) . '</span>';
+            sprintf(__('Edit %s', 'sp-mdl'), get_post_type($post_id)) . '</span>';
 
         edit_post_link($edit_button, '', '', '', 'post-edit-link mdl-button mdl-js-button mdl-button--icon');
     }
@@ -335,7 +335,7 @@ if (!function_exists('sp_mdl_localize_script')) :
                     'debug' => SP_MDL_DEBUG,
                     'theme' => wp_get_theme()->name,
                     'i18n' => array(
-                        'bookmark-alert' => __('Press %s+D to bookmark this page.', 'material-design-lite')
+                        'bookmark-alert' => __('Press %s+D to bookmark this page.', 'sp-mdl')
                     )
                 ) );
                 break;
@@ -374,8 +374,8 @@ if (!function_exists('sp_mdl_comment')) :
                 <li <?php comment_class('comment mdl-color-text--grey-700'); ?> id="comment-<?php comment_ID(); ?>">
 
                 <article id="comment-<?php comment_ID(); ?>" class="comment-container">
-                    <p><?php esc_html_e('Pingback:', 'material-design-lite'); ?>
-                        <span><span itemprop="name"><?php comment_author_link(); ?></span></span> <?php edit_comment_link(esc_html__('(Edit)', 'material-design-lite'), '<span class="edit-link">', '</span>'); ?>
+                    <p><?php esc_html_e('Pingback:', 'sp-mdl'); ?>
+                        <span><span itemprop="name"><?php comment_author_link(); ?></span></span> <?php edit_comment_link(esc_html__('(Edit)', 'sp-mdl'), '<span class="edit-link">', '</span>'); ?>
                     </p>
                 </article>
 
@@ -396,7 +396,7 @@ if (!function_exists('sp_mdl_comment')) :
                         <?php echo get_avatar($comment, 48, '', '', array('class' => 'comment__avatar')); ?>
 
                         <div class="comment__author">
-                            <strong><?php printf(esc_html__('%s ', 'material-design-lite'), sprintf('%s', get_comment_author_link())); ?></strong>
+                            <strong><?php printf(esc_html__('%s ', 'sp-mdl'), sprintf('%s', get_comment_author_link())); ?></strong>
                             <span class="comment-meta commentmetadata">
                                 <span class="comment-date"><?php comment_date(); // 'j M Y'
                                     ?></span>
@@ -409,7 +409,7 @@ if (!function_exists('sp_mdl_comment')) :
 
                     <div class="comment__text">
                         <?php if ('0' == $comment->comment_approved) : ?>
-                            <p class="comment-awaiting-moderation"><?php esc_html_e('Your comment is awaiting moderation.', 'material-design-lite'); ?></p>
+                            <p class="comment-awaiting-moderation"><?php esc_html_e('Your comment is awaiting moderation.', 'sp-mdl'); ?></p>
                         <?php endif; ?>
                         <?php comment_text(); ?>
                     </div>
@@ -421,7 +421,7 @@ if (!function_exists('sp_mdl_comment')) :
                         comment_reply_link(array_merge($args, array(
                             'depth' => $depth,
                             'max_depth' => $args['max_depth'],
-                            'reply_text' => '<i class="material-icons">reply</i>' . __('Reply', 'material-design-lite'),
+                            'reply_text' => '<i class="material-icons">reply</i>' . __('Reply', 'sp-mdl'),
                             //'reply_to_textz' => '',
                             //'login_text'    => '',
                         )));

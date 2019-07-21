@@ -242,11 +242,6 @@ module.exports = function (grunt) {
 
     });
 
-    // Check Missing Text Domain Strings
-    grunt.registerTask('textdomain', [
-        'checktextdomain'
-    ]);
-
     grunt.registerTask('build-css', [
         'sass',
         'autoprefixer',

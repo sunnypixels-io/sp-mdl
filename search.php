@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  * @link https://developer.wordpress.org/reference/functions/get_search_form/
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 
 get_header();
@@ -20,7 +20,7 @@ get_header();
 
                 <header class="page-header mdl-cell mdl-cell--12-col">
                     <h1 class="page-title">
-                        <?php printf( esc_html__( 'Search Results for: %s', 'material-design-lite' ), '<span>' . get_search_query() . '</span>' ); ?>
+                        <?php printf( esc_html__( 'Search Results for: %s', 'sp-mdl' ), '<span>' . get_search_query() . '</span>' ); ?>
                     </h1>
                 </header><!-- .page-header -->
 

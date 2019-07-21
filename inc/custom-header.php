@@ -8,7 +8,7 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 
 if (!function_exists('sp_mdl_custom_header_setup')) :

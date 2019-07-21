@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 
 ?>
@@ -12,21 +12,21 @@
 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
     <section class="no-results not-found mdl-card__supporting-text">
         <header class="page-header">
-            <h1 class="page-title"><?php esc_html_e('Nothing Found', 'material-design-lite'); ?></h1>
+            <h1 class="page-title"><?php esc_html_e('Nothing Found', 'sp-mdl'); ?></h1>
         </header><!-- .page-header -->
 
         <div class="page-content">
             <?php if (is_home() && current_user_can('publish_posts')) : ?>
 
-                <p><?php printf(wp_kses(__('Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'material-design-lite'), array('a' => array('href' => array()))), esc_url(admin_url('post-new.php'))); ?></p>
+                <p><?php printf(wp_kses(__('Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'sp-mdl'), array('a' => array('href' => array()))), esc_url(admin_url('post-new.php'))); ?></p>
 
             <?php elseif (is_search()) : ?>
 
-                <p><?php esc_html_e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'material-design-lite'); ?></p>
+                <p><?php esc_html_e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'sp-mdl'); ?></p>
 
             <?php else : ?>
 
-                <p><?php esc_html_e('It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'material-design-lite'); ?></p>
+                <p><?php esc_html_e('It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'sp-mdl'); ?></p>
 
             <?php endif; ?>
         </div><!-- .page-content -->

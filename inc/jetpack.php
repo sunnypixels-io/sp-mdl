@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 
 if (!function_exists('sp_mdl_jetpack_setup')) :

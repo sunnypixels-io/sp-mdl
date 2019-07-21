@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Material_Design_Lite
+ * @package SP_MDL
  */
 
 if (!defined('SP_MDL_DEBUG'))
@@ -24,9 +24,9 @@ if (!function_exists('sp_mdl_setup')) :
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.
          * If you're building a theme based on Material Design Lite, use a find and replace
-         * to change 'material-design-lite' to the name of your theme in all the template files.
+         * to change 'sp-mdl' to the name of your theme in all the template files.
          */
-        load_theme_textdomain('material-design-lite', get_template_directory() . '/languages');
+        load_theme_textdomain('sp-mdl', get_template_directory() . '/languages');
 
         // Add default posts and comments RSS feed links to head.
         add_theme_support('automatic-feed-links');
@@ -48,9 +48,9 @@ if (!function_exists('sp_mdl_setup')) :
 
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus(array(
-            'primary' => esc_html__('Primary Menu', 'material-design-lite'),
-            'drawer' => esc_html__('Drawer Menu', 'material-design-lite'),
-            'footer' => esc_html__('Footer Menu', 'material-design-lite')
+            'primary' => esc_html__('Primary Menu', 'sp-mdl'),
+            'drawer' => esc_html__('Drawer Menu', 'sp-mdl'),
+            'footer' => esc_html__('Footer Menu', 'sp-mdl')
         ));
 
         /*
@@ -145,9 +145,9 @@ function sp_mdl_widgets_init()
 {
     // TODO: temporary disabled, not sure do we really need a sidebar or maybe made a specific sidebar layout
     //register_sidebar(array(
-    //    'name' => esc_html__('Sidebar', 'material-design-lite'),
+    //    'name' => esc_html__('Sidebar', 'sp-mdl'),
     //    'id' => 'sidebar-1',
-    //    'description' => esc_html__('Add widgets here.', 'material-design-lite'),
+    //    'description' => esc_html__('Add widgets here.', 'sp-mdl'),
     //    'before_widget' => '<section id="%1$s" class="widget mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp %2$s">',
     //    'after_widget' => '</section>',
     //    'before_title' => '<div class="mdl-card__title ' . sp_mdl_get_header_bg_color('mdl-color--') . '"><h2 class="widget-title mdl-card__title-text">',
@@ -155,7 +155,7 @@ function sp_mdl_widgets_init()
     //));
 
     register_sidebar(array(
-        'name' => esc_html__('Footer 1', 'material-design-lite'),
+        'name' => esc_html__('Footer 1', 'sp-mdl'),
         'id' => 'footer-1',
         'description' => '',
         'before_widget' => '<div id="%1$s" class="mdl-mega-footer__drop-down-section footer-widget %2$s">',
@@ -165,7 +165,7 @@ function sp_mdl_widgets_init()
     ));
 
     register_sidebar(array(
-        'name' => esc_html__('Footer 2', 'material-design-lite'),
+        'name' => esc_html__('Footer 2', 'sp-mdl'),
         'id' => 'footer-2',
         'description' => '',
         'before_widget' => '<div id="%1$s" class="mdl-mega-footer__drop-down-section footer-widget %2$s">',
@@ -175,7 +175,7 @@ function sp_mdl_widgets_init()
     ));
 
     register_sidebar(array(
-        'name' => esc_html__('Footer 3', 'material-design-lite'),
+        'name' => esc_html__('Footer 3', 'sp-mdl'),
         'id' => 'footer-3',
         'description' => '',
         'before_widget' => '<div id="%1$s" class="mdl-mega-footer__drop-down-section footer-widget %2$s">',
@@ -185,7 +185,7 @@ function sp_mdl_widgets_init()
     ));
 
     register_sidebar(array(
-        'name' => esc_html__('Footer 4', 'material-design-lite'),
+        'name' => esc_html__('Footer 4', 'sp-mdl'),
         'id' => 'footer-4',
         'description' => '',
         'before_widget' => '<div id="%1$s" class="mdl-mega-footer__drop-down-section footer-widget %2$s">',
