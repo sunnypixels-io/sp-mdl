@@ -1,11 +1,11 @@
-=== Material Design Lite ===
+=== SP MDL ===
 
 Contributors: reatlat
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, mdl, material-design-lite, reatlat, sunnypixels
 
 Requires at least: 4.5
 Tested up to: 5.2.2
-Stable tag: 1.0.2
+Stable tag: 1.0.0
 License: GNU General Public License v3 or later
 License URI: LICENSE
 
@@ -13,7 +13,7 @@ A starter theme called Material Design Lite.
 
 == Description ==
 
-Material Design Lite is a first hackable Material Design WordPress theme for the 21st Century. That uses Sass, ES6 and of course Material Design Lite by Google.
+SP MDL is a first hackable Material Design WordPress theme for the 21st Century. That uses Sass, ES6 and of course Material Design Lite by Google.
 
 == Installation ==
 
@@ -36,13 +36,7 @@ There are multiple ways you can use a child theme with the MDL Theme, Use any on
 
 == Changelog ==
 
-= 1.0.2 - Jule 21 2019 =
-* include accessibility skip link
-
-= 1.0.1 - Jule 15 2019 =
-* update title, now they work as a links
-
-= 1.0.0 - Jule 13 2019 =
+= 1.0.0 - Jule 21 2019 =
 * Initial release
 
 == Credits ==

@@ -215,10 +215,10 @@ function sp_mdl_scripts()
     wp_enqueue_style('google-fonts-roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
     //wp_enqueue_style( 'material-design-lite-style', get_stylesheet_uri() ); // I don't like a classic way for CSS
-    wp_enqueue_style('sp-mdl-style', get_template_directory_uri() . '/assets/css/material-design-lite' . $min . '.css', array(), sp_mdl_theme_version()); // already minifed ;) but we have MAP file
+    wp_enqueue_style('sp-mdl-style', get_template_directory_uri() . '/assets/css/sp-mdl' . $min . '.css', array(), sp_mdl_theme_version()); // already minifed ;) but we have MAP file
     wp_add_inline_style('sp-mdl-style', sp_mdl_theme_custom_css());
 
-    wp_enqueue_script('sp-mdl-scripts', get_template_directory_uri() . '/assets/js/material-design-lite' . $min . '.js', array('jquery'), sp_mdl_theme_version(), true);
+    wp_enqueue_script('sp-mdl-scripts', get_template_directory_uri() . '/assets/js/sp-mdl' . $min . '.js', array('jquery'), sp_mdl_theme_version(), true);
     wp_localize_script('sp-mdl-scripts','MDL_CONFIG', sp_mdl_localize_script('public'));
 
     wp_enqueue_script('sp-mdl-navigation', get_template_directory_uri() . '/assets/js/navigation' . $min . '.js', array(), sp_mdl_theme_version(), true);

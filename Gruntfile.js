@@ -165,7 +165,7 @@ module.exports = function (grunt) {
                 files: {
                     'assets/js/admin.dev.js': 'assets/js/admin.js',
                     'assets/js/customizer.dev.js': 'assets/js/customizer.js',
-                    'assets/js/material-design-lite.dev.js': 'assets/js/material-design-lite.js',
+                    'assets/js/sp-mdl.dev.js': 'assets/js/sp-mdl.js',
                     'assets/js/navigation.dev.js': 'assets/js/navigation.js',
                     'assets/js/skip-link-focus-fix.dev.js': 'assets/js/skip-link-focus-fix.js'
                 }
@@ -180,7 +180,7 @@ module.exports = function (grunt) {
                 files: {
                     'assets/js/admin.min.js': 'assets/js/admin.dev.js',
                     'assets/js/customizer.min.js': 'assets/js/customizer.dev.js',
-                    'assets/js/material-design-lite.min.js': 'assets/js/material-design-lite.dev.js',
+                    'assets/js/sp-mdl.min.js': 'assets/js/sp-mdl.dev.js',
                     'assets/js/navigation.min.js': 'assets/js/navigation.dev.js',
                     'assets/js/skip-link-focus-fix.min.js': 'assets/js/skip-link-focus-fix.dev.js'
                 }
@@ -196,7 +196,7 @@ module.exports = function (grunt) {
                     'assets/css/editor.dev.css': 'sass/editor.scss',
                     'assets/css/admin.dev.css': 'sass/admin.scss',
                     'assets/css/customizer.dev.css': 'sass/customizer.scss',
-                    'assets/css/material-design-lite.dev.css': 'sass/material-design-lite.scss',
+                    'assets/css/sp-mdl.dev.css': 'sass/sp-mdl.scss',
                     'assets/css/woocommerce.dev.css': 'sass/woocommerce.scss'
                 }
             }
@@ -208,7 +208,7 @@ module.exports = function (grunt) {
                     'assets/css/editor.css': 'assets/css/editor.dev.css',
                     'assets/css/admin.css': 'assets/css/admin.dev.css',
                     'assets/css/customizer.css': 'assets/css/customizer.dev.css',
-                    'assets/css/material-design-lite.css': 'assets/css/material-design-lite.dev.css',
+                    'assets/css/sp-mdl.css': 'assets/css/sp-mdl.dev.css',
                     'assets/css/woocommerce.css': 'assets/css/woocommerce.dev.css'
                 }
             }
@@ -223,7 +223,7 @@ module.exports = function (grunt) {
                     'assets/css/editor.min.css': 'assets/css/editor.css',
                     'assets/css/admin.min.css': 'assets/css/admin.css',
                     'assets/css/customizer.min.css': 'assets/css/customizer.css',
-                    'assets/css/material-design-lite.min.css': 'assets/css/material-design-lite.css',
+                    'assets/css/sp-mdl.min.css': 'assets/css/sp-mdl.css',
                     'assets/css/woocommerce.min.css': 'assets/css/woocommerce.css'
                 }
             }

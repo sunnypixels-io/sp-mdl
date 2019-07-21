@@ -1,6 +1,6 @@
 {
-  "name": "material-design-lite",
-  "version": "1.0.2",
+  "name": "sp-mdl",
+  "version": "1.0.0",
   "homepage": "https://sunnypixels.io/",
   "description": "This theme, like WordPress, is licensed under the GPL. Use it to make something cool, have fun, and share what you've learned with others.",
   "main": "Gruntfile.js",
