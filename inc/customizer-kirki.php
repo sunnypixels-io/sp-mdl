@@ -49,7 +49,7 @@ if (class_exists('Kirki')) :
             'type'        => 'custom',
             'settings'    => 'theme_primary_color_title',
             'section'     => 'sp_mdl_theme__color',
-            'default'     => kirki_custom_title( 'Primary color'),
+            'default'     => kirki_custom_title( __('Primary color', 'sp-mdl')),
         ] );
 
         Kirki::add_field( 'sp_mdl_theme', [
@@ -68,7 +68,7 @@ if (class_exists('Kirki')) :
             'type'        => 'custom',
             'settings'    => 'theme_accent_color_title',
             'section'     => 'sp_mdl_theme__color',
-            'default'     => kirki_custom_title( 'Accent color'),
+            'default'     => kirki_custom_title( __('Accent color', 'sp-mdl')),
         ] );
 
         Kirki::add_field( 'sp_mdl_theme', [
@@ -97,7 +97,7 @@ if (class_exists('Kirki')) :
             'type'        => 'custom',
             'settings'    => 'background_setting_title',
             'section'     => 'sp_mdl_theme__background',
-            'default'     => kirki_custom_title( 'background control'),
+            'default'     => kirki_custom_title( __('background control', 'sp-mdl')),
             'description' => esc_html__( 'Background controls are pretty complex - but extremely useful if properly used.', 'sp-mdl' ),
         ] );
 
@@ -135,7 +135,7 @@ if (class_exists('Kirki')) :
             'type'        => 'custom',
             'settings'    => 'blog_entries_header_title',
             'section'     => 'sp_mdl_theme__blog_entries',
-            'default'     => kirki_custom_title( 'HEADER'),
+            'default'     => kirki_custom_title( __('Header', 'sp-mdl')),
             'priority'    => 100,
         ] );
 
@@ -223,7 +223,7 @@ if (class_exists('Kirki')) :
             'type'        => 'custom',
             'settings'    => 'blog_entries_content_title',
             'section'     => 'sp_mdl_theme__blog_entries',
-            'default'     => kirki_custom_title('CONTENT'),
+            'default'     => kirki_custom_title('Content'),
             'priority'    => 125,
         ] );
 
@@ -261,7 +261,7 @@ if (class_exists('Kirki')) :
             'type'        => 'custom',
             'settings'    => 'blog_entries_footer_title',
             'section'     => 'sp_mdl_theme__blog_entries',
-            'default'     => kirki_custom_title('FOOTER'),
+            'default'     => kirki_custom_title(__('Footer', 'sp-mdl')),
             'priority'    => 140,
         ] );
 
@@ -320,7 +320,7 @@ if (class_exists('Kirki')) :
             'type'        => 'custom',
             'settings'    => 'blog_single_header_title',
             'section'     => 'sp_mdl_theme__blog_single',
-            'default'     => kirki_custom_title( 'Header'),
+            'default'     => kirki_custom_title( __('Header', 'sp-mdl')),
             'priority'    => 100,
         ] );
 
@@ -359,7 +359,7 @@ if (class_exists('Kirki')) :
             'type'        => 'custom',
             'settings'    => 'blog_single_content_title',
             'section'     => 'sp_mdl_theme__blog_single',
-            'default'     => kirki_custom_title( 'Content'),
+            'default'     => kirki_custom_title( __('Content', 'sp-mdl')),
             'priority'    => 115,
         ] );
 
@@ -384,7 +384,7 @@ if (class_exists('Kirki')) :
             'type'        => 'custom',
             'settings'    => 'blog_page_header_title',
             'section'     => 'sp_mdl_theme__page',
-            'default'     => kirki_custom_title( 'Header'),
+            'default'     => kirki_custom_title( __('Header', 'sp-mdl')),
             'priority'    => 100,
         ] );
 
@@ -433,7 +433,7 @@ if (class_exists('Kirki')) :
             'type'        => 'custom',
             'settings'    => 'comments_title',
             'section'     => 'sp_mdl_theme__comments',
-            'default'     => kirki_custom_title( 'Comments'),
+            'default'     => kirki_custom_title( __('Comments', 'sp-mdl')),
             'priority'    => 100,
         ] );
 

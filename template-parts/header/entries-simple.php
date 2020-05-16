@@ -13,7 +13,7 @@ $header_style = get_theme_mod('blog_entries_header_colorful_title', false) ? ' s
 
     <div class="mdl-card__title">
         <header>
-            <?php the_title('<h2 class="mdl-card__title-text"><a href="' . get_permalink() . '">', '</a></h2>'); ?>
+            <?php the_title('<h2 class="mdl-card__title-text"><a href="' . esc_url(get_permalink()) . '">', '</a></h2>'); ?>
         </header>
 
         <?php sp_mdl_edit_post_link(get_the_ID()); ?>

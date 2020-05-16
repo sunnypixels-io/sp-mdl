@@ -276,7 +276,7 @@ function sp_mdl_modify_read_more_link()
 
     <br><br>
     <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect"
-       href="<?php echo get_permalink(); ?>"><?php _e('Read More', 'sp-mdl'); ?></a>
+       href="<?php the_permalink(); ?>"><?php _e('Read More', 'sp-mdl'); ?></a>
 
     <?php
     $read_more_link = ob_get_contents();
@@ -302,7 +302,7 @@ if (!function_exists('sp_mdl_get_source_for_autocomplete')) :
             foreach ($posts as $k => $post) {
                 $source[$k]['id'] = $post->ID;
                 $source[$k]['label'] = $post->post_title; // The name of the post
-                $source[$k]['value'] = get_permalink($post->ID);
+                $source[$k]['value'] = esc_url(get_permalink($post->ID));
             }
         endif;
 
@@ -375,7 +375,7 @@ if (!function_exists('sp_mdl_comment')) :
 
                 <article id="comment-<?php comment_ID(); ?>" class="comment-container">
                     <p><?php esc_html_e('Pingback:', 'sp-mdl'); ?>
-                        <span><span itemprop="name"><?php comment_author_link(); ?></span></span> <?php edit_comment_link(esc_html__('(Edit)', 'sp-mdl'), '<span class="edit-link">', '</span>'); ?>
+                        <span><span itemprop="name"><?php comment_author_link(); ?></span></span> <?php edit_comment_link('<i class="material-icons">edit</i>', '<span class="edit-link">', '</span>'); ?>
                     </p>
                 </article>
 
@@ -396,7 +396,7 @@ if (!function_exists('sp_mdl_comment')) :
                         <?php echo get_avatar($comment, 48, '', '', array('class' => 'comment__avatar')); ?>
 
                         <div class="comment__author">
-                            <strong><?php printf(esc_html__('%s ', 'sp-mdl'), sprintf('%s', get_comment_author_link())); ?></strong>
+                            <strong><?php printf(esc_html__('%s '), sprintf('%s', get_comment_author_link())); ?></strong>
                             <span class="comment-meta commentmetadata">
                                 <span class="comment-date"><?php comment_date(); // 'j M Y'
                                     ?></span>

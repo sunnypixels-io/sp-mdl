@@ -207,9 +207,9 @@ function sp_mdl_scripts()
     $primary = sp_mdl_get_primary_color();
     $accent = sp_mdl_get_accent_color();
 
-    wp_enqueue_style('mdl-css', 'https://storage.googleapis.com/code.getmdl.io/1.3.0/material.' . $primary . '-' . $accent . '.min.css', array(), '1.3.0');
-    wp_enqueue_style('mdl-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons');
-    wp_enqueue_script('mdl-js', 'https://storage.googleapis.com/code.getmdl.io/1.3.0/material.min.js', array(), '1.3.0', true);
+    wp_enqueue_style('google-mdl-css', 'https://storage.googleapis.com/code.getmdl.io/1.3.0/material.' . $primary . '-' . $accent . '.min.css', array(), '1.3.0');
+    wp_enqueue_style('google-mdl-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons');
+    wp_enqueue_script('google-mdl-js', 'https://storage.googleapis.com/code.getmdl.io/1.3.0/material.min.js', array(), '1.3.0', true);
 
     // TODO, create function for select fonts assets for Theme also include MDL icons to one query
     wp_enqueue_style('google-fonts-roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');

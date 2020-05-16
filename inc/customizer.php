@@ -16,9 +16,14 @@ function sp_mdl_customize_register( $wp_customize )
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
-    $wp_customize->remove_section('colors');
-    $wp_customize->remove_section('background_image');
-    $wp_customize->remove_section('header_image');
+	/**
+     * Note:
+     * removing Core settings not allowed :/
+     * but if you are dev you can uncomment it for make it looks customizer good for this theme :)
+     */
+    // $wp_customize->remove_section('colors');
+    // $wp_customize->remove_section('background_image');
+    // $wp_customize->remove_section('header_image');
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(

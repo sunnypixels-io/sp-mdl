@@ -8,7 +8,7 @@
  */
 ?>
 <?php do_action( 'sp_mdl_before_searchform' ); ?>
-<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+<form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/')); ?>">
     <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
         <i class="material-icons">search</i>
     </label>

@@ -15,7 +15,7 @@
         <?php sp_mdl_edit_post_link(get_the_ID()); ?>
 
         <header>
-            <?php the_title('<h3><a href="' . get_permalink() . '">', '</a></h3>'); ?>
+            <?php the_title('<h3><a href="' . esc_url(get_permalink()) . '">', '</a></h3>'); ?>
         </header>
 
     </div>

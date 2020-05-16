@@ -124,15 +124,9 @@ if (!function_exists('sp_mdl_posted_by')) :
             esc_html(get_the_modified_date())
         );
 
-        $posted_on = sprintf(
-            esc_html_x('%s', 'post date', 'sp-mdl'),
-            '<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $time_string . '</a>'
-        );
+        $posted_on = '<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $time_string . '</a>';
 
-        $byline = sprintf(
-            esc_html_x('%s', 'post author', 'sp-mdl'),
-            '<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
-        );
+        $byline = '<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>';
 
         echo '<strong class="byline"> ' . $byline . '</strong> <span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 
@@ -160,10 +154,12 @@ if (!function_exists('sp_mdl_entry_footer')) :
                 $tags = get_the_tags();
                 $html = '<div class="post_tags">';
                 foreach ($tags as $tag) {
-                    $tag_link = get_tag_link($tag->term_id);
-
-                    $html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='mdl-button mdl-js-button mdl-js-ripple-effect'>";
-                    $html .= "{$tag->name}</a>";
+                    $html .= sprintf(
+                        '<a href="%s" title="%s" class="mdl-button mdl-js-button mdl-js-ripple-effect">%s</a>',
+                        get_tag_link($tag->term_id),
+                        $tag->name,
+                        $tag->name
+                    );
                 }
                 $html .= '</div>';
                 echo $html;

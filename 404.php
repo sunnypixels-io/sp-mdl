@@ -27,7 +27,7 @@ get_header();
                         <br>
 
                         <p>
-                            <a href="<?php home_url(); ?>" class="mdl-button mdl-js-button mdl-button--raised ">
+                            <a href="<?php esc_url(home_url()); ?>" class="mdl-button mdl-js-button mdl-button--raised">
                                 <i class="material-icons">home</i>
                                 <?php _e('take me home', 'sp-mdl'); ?>
                             </a>
